@@ -11,3 +11,8 @@ print(die * c(1,2))
 result <- sample(die, size = 2, replace = TRUE)
 print(result)
 sum(result)
+
+#Notes (Ctrl + shift + c)
+
+
+
