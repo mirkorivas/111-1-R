@@ -88,6 +88,7 @@ for (e in list1){
   }
 }
 ```
+
 ```{r}
 #Collecting type : 2nd method (méthode normale par objet)
 #Collect vertically
@@ -98,9 +99,7 @@ c("salut", "salut2", "salut3")
 list("a", "b")
 list("c", "d")
 list(list("a", "b"), list("c", "d"))
-
 ```
-
 
 ```{r}
 #Name the values, NOT BINDING!!!
@@ -113,9 +112,87 @@ list(
   "2nd"=list(),...
 )
 ```
+
 ```{r}
 .password = "asjdhsaiohsa"
 ```
+
+```{r}
+c("john", "mary") -> list
+for (e in list){
+  print(e)
+}
+
+
+#Atomic Vector
+c(2.3, 4, 5.3)
+c("A1"=TRUE,"A2"=FALSE,"A3"=TRUE) -> vector1
+print(vector1)
+
+#Non Atomic Vector
+list("name"="John","height"=177,"age"=38, "married"=TRUE) ->johnInfo
+print(johnInfo)
+
+
+#Retrieve elements from the vectors
+#Second value of vector1 & john Info
+print(vector1[[2]])
+print(johnInfo[[2]])
+#Is john married
+print(johnInfo[["married"]])
+
+
+#Listes imbriqueés 
+sample_data <- list(
+  "observation1"=list("married"=TRUE,"name"="John"), 
+  "observation2"=list("married"=FALSE,"name"="Mary"), 
+  "observation3"=list("married"=TRUE,"name"="Steven")
+)
+print(sample_data)
+
+#get name of steven
+print(sample_data[[3]][[2]])
+print(sample_data[["observation3"]][["name"]])
+print(sample_data$observation3$name)
+```
+
+
+```{r}
+data.entry("salut") -> var
+print(var)
+```
+Read CSV
+```{r}
+#mydata=read.table(file=file.choose(),+ sep =",",+ header=TRUE) 
+
+mydata <- read.table("C:\\Users\\mirko\\Documents\\NTPUProg\\ProjetsR\\111-1-R\\cities.csv",
+    header=TRUE, sep="," 
+) 
+print(mydata)
+
+mydata2 <- read.csv("C:\\Users\\mirko\\Documents\\NTPUProg\\ProjetsR\\111-1-R\\cities.csv",
+    header=TRUE, sep="," 
+) 
+print(mydata2)
+for (c in mydata2){
+  print(c)
+}
+
+```
+
+```{r}
+# Load the package required to read JSON files.
+library("rjson")
+
+# Give the input file name to the function.
+result <- fromJSON(file = "C:\\Users\\mirko\\Documents\\NTPUProg\\ProjetsR\\111-1-R\\json.json")
+
+# Print the result.
+print(result)
+
+```
+
+
 
 
 
