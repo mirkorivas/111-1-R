@@ -1784,7 +1784,7 @@ the chunk or by placing your cursor inside it and pressing
 <h4>h4…</h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0NvbnRyb2wgKyBFbnRlciBpZiB3ZSB3YW50IHRvIHJ1biBqdXN0IG9uZSBsaW5lXG4jIHBsb3QoY2FycylcbiMgcHJpbnQoXCJIZWxsbyBXb3JsZFwiKVxuIyBwcmludChcIkhlbGxvIFdvcmxkIVwiLCBxdW90ZSA9IEZBTFNFKVxuIyBwcmludChwYXN0ZShcIkhvd1wiLFwiYXJlXCIsXCJ5b3U/XCIpKVxuIyBcbiMgZGllIDwtIDE6NlxuIyBwcmludChkaWUpXG4jIHByaW50KGRpZSAqIGMoMSwyKSlcbiMgcmVzdWx0IDwtIHNhbXBsZShkaWUsIHNpemUgPSAyLCByZXBsYWNlID0gVFJVRSlcbiMgcHJpbnQocmVzdWx0KVxuIyBzdW0ocmVzdWx0KVxuXG5hPTJcbmI9M1xuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0NvbnRyb2wgKyBFbnRlciBpZiB3ZSB3YW50IHRvIHJ1biBqdXN0IG9uZSBsaW5lXG4jIHBsb3QoY2FycylcbiMgcHJpbnQoXCJIZWxsbyBXb3JsZFwiKVxuIyBwcmludChcIkhlbGxvIFdvcmxkIVwiLCBxdW90ZSA9IEZBTFNFKVxuIyBwcmludChwYXN0ZShcIkhvd1wiLFwiYXJlXCIsXCJ5b3U/XCIpKVxuIyBcbiMgZGllIDwtIDE6NlxuIyBwcmludChkaWUpXG4jIHByaW50KGRpZSAqIGMoMSwyKSlcbiMgcmVzdWx0IDwtIHNhbXBsZShkaWUsIHNpemUgPSAyLCByZXBsYWNlID0gVFJVRSlcbiMgcHJpbnQocmVzdWx0KVxuIyBzdW0ocmVzdWx0KVxuXG5hPTJcbmI9M1xuI1dlIGNhbiB0eXBlIFZpZXcoYSkgaW4gY29uc29sZSB0byBzZWUgaW4gZGV0YWlsIG91ciB2YXJpYWJsZVxuYGBgIn0= -->
 <pre class="r"><code>#Control + Enter if we want to run just one line
 # plot(cars)
 # print(&quot;Hello World&quot;)
@@ -1799,7 +1799,8 @@ the chunk or by placing your cursor inside it and pressing
 # sum(result)
 
 a=2
-b=3</code></pre>
+b=3
+#We can type View(a) in console to see in detail our variable</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1829,14 +1830,14 @@ bigList[[3]][[2]] #print que 35</code></pre>
 <p>###Atomic Vectors</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGVyc29uTmFtZSA9IGMoXCJKb2huXCIsIFwiTWFyeVwiKVxuaW50ZXJlc3RpbmdOdW1iZXJzID0gYygyLCAzLjE0MTIpXG5jb3ZpZFBvc2l0aXZlID0gYyhUUlVFLCBUUlVFLCBGKVxuXG5wZXJzb25OYW1lIDwtIGMoXCJKb2huXCIsIFwiTWFyeVwiKVxuaW50ZXJlc3RpbmdOdW1iZXJzIDwtIGMoMiwgMy4xNDEyKVxuY292aWRQb3NpdGl2ZSA8LSBjKFRSVUUsIFRSVUUsIEYpXG5cbmMoXCJKb2huXCIsIFwiTWFyeVwiKSAtPiBwZXJzb25OYW1lXG5jKDIsIDMuMTQxMikgLT4gaW50ZXJlc3RpbmdOdW1iZXJzXG5jKFRSVUUsIFRSVUUsIEYpIC0+IGNvdmlkUG9zaXRpdmVcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGVyc29uTmFtZSA9IGMoXCJKb2huXCIsIFwiTWFyeVwiKVxuaW50ZXJlc3RpbmdOdW1iZXJzID0gYygyLCAzLjE0MTIpXG5jb3ZpZFBvc2l0aXZlID0gYyhUUlVFLCBUUlVFLCBGKVxuXG5wZXJzb25OYW1lIDwtIGMoXCJKb2huXCIsIFwiTWFyeVwiKVxuaW50ZXJlc3RpbmdOdW1iZXJzIDwtIGMoMiwgMy4xNDEyLCBOYU4pXG5jb3ZpZFBvc2l0aXZlIDwtIGMoVFJVRSwgVFJVRSwgRiwgTkEpXG5cbmMoXCJKb2huXCIsIFwiTWFyeVwiKSAtPiBwZXJzb25OYW1lXG5jKDIsIDMuMTQxMikgLT4gaW50ZXJlc3RpbmdOdW1iZXJzXG5jKFRSVUUsIFRSVUUsIEYpIC0+IGNvdmlkUG9zaXRpdmVcbmBgYCJ9 -->
 <pre class="r"><code>personName = c(&quot;John&quot;, &quot;Mary&quot;)
 interestingNumbers = c(2, 3.1412)
 covidPositive = c(TRUE, TRUE, F)
 
 personName &lt;- c(&quot;John&quot;, &quot;Mary&quot;)
-interestingNumbers &lt;- c(2, 3.1412)
-covidPositive &lt;- c(TRUE, TRUE, F)
+interestingNumbers &lt;- c(2, 3.1412, NaN)
+covidPositive &lt;- c(TRUE, TRUE, F, NA)
 
 c(&quot;John&quot;, &quot;Mary&quot;) -&gt; personName
 c(2, 3.1412) -&gt; interestingNumbers
@@ -1885,6 +1886,90 @@ for (e in list1){
 [1] &quot;it&#39;s False, so break&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0NvbGxlY3RpbmcgdHlwZSA6IDJuZCBtZXRob2QgKG3DqXRob2RlIG5vcm1hbGUgcGFyIG9iamV0KVxuI0NvbGxlY3QgdmVydGljYWxseVxuI0F0b21pYyB2ZWN0b3IgLS0+IGNvbGxlY3QgZGF0YSBmcm9tIHRoZSBzYW1lIHR5cGUgdG9nZXRoZXJcbmMoMTExLCAxMTEsIDExMSwgMSlcbmBgYCJ9 -->
+<pre class="r"><code>#Collecting type : 2nd method (méthode normale par objet)
+#Collect vertically
+#Atomic vector --&gt; collect data from the same type together
+c(111, 111, 111, 1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDExMSAxMTEgMTExICAgMVxuIn0= -->
+<pre><code>[1] 111 111 111   1</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYyhcInNhbHV0XCIsIFwic2FsdXQyXCIsIFwic2FsdXQzXCIpXG5gYGAifQ== -->
+<pre class="r"><code>c(&quot;salut&quot;, &quot;salut2&quot;, &quot;salut3&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwic2FsdXRcIiAgXCJzYWx1dDJcIiBcInNhbHV0M1wiXG4ifQ== -->
+<pre><code>[1] &quot;salut&quot;  &quot;salut2&quot; &quot;salut3&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcImFcIiwgXCJiXCIpXG5gYGAifQ== -->
+<pre class="r"><code>list(&quot;a&quot;, &quot;b&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiW1sxXV1cblsxXSBcImFcIlxuXG5bWzJdXVxuWzFdIFwiYlwiXG4ifQ== -->
+<pre><code>[[1]]
+[1] &quot;a&quot;
+
+[[2]]
+[1] &quot;b&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcImNcIiwgXCJkXCIpXG5gYGAifQ== -->
+<pre class="r"><code>list(&quot;c&quot;, &quot;d&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiW1sxXV1cblsxXSBcImNcIlxuXG5bWzJdXVxuWzFdIFwiZFwiXG4ifQ== -->
+<pre><code>[[1]]
+[1] &quot;c&quot;
+
+[[2]]
+[1] &quot;d&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChsaXN0KFwiYVwiLCBcImJcIiksIGxpc3QoXCJjXCIsIFwiZFwiKSlcbmBgYCJ9 -->
+<pre class="r"><code>list(list(&quot;a&quot;, &quot;b&quot;), list(&quot;c&quot;, &quot;d&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiW1sxXV1cbltbMV1dW1sxXV1cblsxXSBcImFcIlxuXG5bWzFdXVtbMl1dXG5bMV0gXCJiXCJcblxuXG5bWzJdXVxuW1syXV1bWzFdXVxuWzFdIFwiY1wiXG5cbltbMl1dW1syXV1cblsxXSBcImRcIlxuIn0= -->
+<pre><code>[[1]]
+[[1]][[1]]
+[1] &quot;a&quot;
+
+[[1]][[2]]
+[1] &quot;b&quot;
+
+
+[[2]]
+[[2]][[1]]
+[1] &quot;c&quot;
+
+[[2]][[2]]
+[1] &quot;d&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXCJTYWx1dFwiXG5gYGAifQ== -->
+<pre class="r"><code>&quot;Salut&quot;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiU2FsdXRcIlxuIn0= -->
+<pre><code>[1] &quot;Salut&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVFJVRVxuYGBgIn0= -->
+<pre class="r"><code>TRUE</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGVyc29uMSA8LSBsaXN0KFwiYWdlXCI9MjUsIFwibmFtZVwiPVwiSmVhblwiLCBcInJldmVudWVcIj0xMjEzNClcbnBhc3RlMChwZXJzb24xKVxuYGBgIn0= -->
+<pre class="r"><code>person1 &lt;- list(&quot;age&quot;=25, &quot;name&quot;=&quot;Jean&quot;, &quot;revenue&quot;=12134)
+paste0(person1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMjVcIiAgICBcIkplYW5cIiAgXCIxMjEzNFwiXG4ifQ== -->
+<pre><code>[1] &quot;25&quot;    &quot;Jean&quot;  &quot;12134&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuLnBhc3N3b3JkID0gXCJhc2pkaHNhaW9oc2FcIlxuYGBgIn0= -->
+<pre class="r"><code>.password = &quot;asjdhsaiohsa&quot;</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the
 toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
@@ -1900,7 +1985,7 @@ run in the editor is displayed.</p>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLg0KDQpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ3RybCtTaGlmdCtFbnRlciouDQoNCiMgSDENCg0KIyMgaDINCg0KIyMjIGgzDQoNCiMjIyMgaDQuLi4NCg0KYGBge3IgYWJCb3JufQ0KI0NvbnRyb2wgKyBFbnRlciBpZiB3ZSB3YW50IHRvIHJ1biBqdXN0IG9uZSBsaW5lDQojIHBsb3QoY2FycykNCiMgcHJpbnQoIkhlbGxvIFdvcmxkIikNCiMgcHJpbnQoIkhlbGxvIFdvcmxkISIsIHF1b3RlID0gRkFMU0UpDQojIHByaW50KHBhc3RlKCJIb3ciLCJhcmUiLCJ5b3U/IikpDQojIA0KIyBkaWUgPC0gMTo2DQojIHByaW50KGRpZSkNCiMgcHJpbnQoZGllICogYygxLDIpKQ0KIyByZXN1bHQgPC0gc2FtcGxlKGRpZSwgc2l6ZSA9IDIsIHJlcGxhY2UgPSBUUlVFKQ0KIyBwcmludChyZXN1bHQpDQojIHN1bShyZXN1bHQpDQoNCmE9Mg0KYj0zDQpgYGANCg0KYGBge3J9DQojVGhlIHNlY29uZCBzeW1ib2wgaXMgcnVuIGV2ZXJ5dGhpbmcgdG8gdGhpcywgYnV0IG5vdCB0aGlzIG9uZQ0KYStiDQpgYGANCg0KIyMjVGVzdHMNCmBgYHtyfQ0KbGlzdCgiSm9obiIsIDE3OCwgVFJVRSlbWzFdXQ0KbGlzdCgiSm9obiIsIDE3OCwgVFJVRSlbWzJdXQ0KbGlzdCgiSm9obiIsIDE3OCwgVFJVRSlbWzNdXQ0KDQpiaWdMaXN0IDwtIGxpc3QoIkpvaG4iLDQyLCBsaXN0KCJNYXJ5IiwgMzUpKQ0KcHJpbnQoIlRoaXMgaXMgYmlnTGlzdCIpDQpwcmludChwYXN0ZShiaWdMaXN0W1sxXV0sIGJpZ0xpc3RbWzJdXSwgYmlnTGlzdFtbM11dKSkgI1ByaW50IGxlcyBkZXV4IGFsdGVybmF0aXZlcw0KYmlnTGlzdFtbM11dW1syXV0gI3ByaW50IHF1ZSAzNQ0KYGBgDQoNCiMjI0F0b21pYyBWZWN0b3JzDQpgYGB7cn0NCnBlcnNvbk5hbWUgPSBjKCJKb2huIiwgIk1hcnkiKQ0KaW50ZXJlc3RpbmdOdW1iZXJzID0gYygyLCAzLjE0MTIpDQpjb3ZpZFBvc2l0aXZlID0gYyhUUlVFLCBUUlVFLCBGKQ0KDQpwZXJzb25OYW1lIDwtIGMoIkpvaG4iLCAiTWFyeSIpDQppbnRlcmVzdGluZ051bWJlcnMgPC0gYygyLCAzLjE0MTIpDQpjb3ZpZFBvc2l0aXZlIDwtIGMoVFJVRSwgVFJVRSwgRikNCg0KYygiSm9obiIsICJNYXJ5IikgLT4gcGVyc29uTmFtZQ0KYygyLCAzLjE0MTIpIC0+IGludGVyZXN0aW5nTnVtYmVycw0KYyhUUlVFLCBUUlVFLCBGKSAtPiBjb3ZpZFBvc2l0aXZlDQpgYGANCg0KDQojIyNpbmRleGVzDQpgYGB7cn0NCmxpc3QoIlRleHQiLCAxLCBGQUxTRSwgMi4zNDMpIC0+IGxpc3QxDQpwcmludChsaXN0MVtbMV1dKQ0KcHJpbnQocGFzdGUoIkZpcnN0IHZhbHVlIDoiLCBsaXN0MVtbMV1dLCJTZWNvbmQgdmFsdWUgOiIsIGxpc3QxW1szXV0pKQ0KDQoNCmBgYA0KDQoNCiMjIyBsb29wcw0KYGBge3J9DQpsaXN0MSA9IGxpc3QoIlRleHQiLCAxLCBGQUxTRSwgMi4zNDMpDQpmb3IgKGUgaW4gbGlzdDEpew0KICBwcmludChlKQ0KICBpZihlID09IEZBTFNFKXsNCiAgICBwcmludCgiaXQncyBGYWxzZSwgc28gYnJlYWsiKQ0KICAgIGJyZWFrDQogIH0NCn0NCmBgYA0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCkFkZCBhIG5ldyBjaHVuayBieSBjbGlja2luZyB0aGUgKkluc2VydCBDaHVuayogYnV0dG9uIG9uIHRoZSB0b29sYmFyIG9yIGJ5IHByZXNzaW5nICpDdHJsK0FsdCtJKi4NCg0KV2hlbiB5b3Ugc2F2ZSB0aGUgbm90ZWJvb2ssIGFuIEhUTUwgZmlsZSBjb250YWluaW5nIHRoZSBjb2RlIGFuZCBvdXRwdXQgd2lsbCBiZSBzYXZlZCBhbG9uZ3NpZGUgaXQgKGNsaWNrIHRoZSAqUHJldmlldyogYnV0dG9uIG9yIHByZXNzICpDdHJsK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuDQoNClRoZSBwcmV2aWV3IHNob3dzIHlvdSBhIHJlbmRlcmVkIEhUTUwgY29weSBvZiB0aGUgY29udGVudHMgb2YgdGhlIGVkaXRvci4gQ29uc2VxdWVudGx5LCB1bmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBSIGNvZGUgY2h1bmtzLiBJbnN0ZWFkLCB0aGUgb3V0cHV0IG9mIHRoZSBjaHVuayB3aGVuIGl0IHdhcyBsYXN0IHJ1biBpbiB0aGUgZWRpdG9yIGlzIGRpc3BsYXllZC4NCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLg0KDQpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ3RybCtTaGlmdCtFbnRlciouDQoNCiMgSDENCg0KIyMgaDINCg0KIyMjIGgzDQoNCiMjIyMgaDQuLi4NCg0KYGBge3IgYWJCb3JufQ0KI0NvbnRyb2wgKyBFbnRlciBpZiB3ZSB3YW50IHRvIHJ1biBqdXN0IG9uZSBsaW5lDQojIHBsb3QoY2FycykNCiMgcHJpbnQoIkhlbGxvIFdvcmxkIikNCiMgcHJpbnQoIkhlbGxvIFdvcmxkISIsIHF1b3RlID0gRkFMU0UpDQojIHByaW50KHBhc3RlKCJIb3ciLCJhcmUiLCJ5b3U/IikpDQojIA0KIyBkaWUgPC0gMTo2DQojIHByaW50KGRpZSkNCiMgcHJpbnQoZGllICogYygxLDIpKQ0KIyByZXN1bHQgPC0gc2FtcGxlKGRpZSwgc2l6ZSA9IDIsIHJlcGxhY2UgPSBUUlVFKQ0KIyBwcmludChyZXN1bHQpDQojIHN1bShyZXN1bHQpDQoNCmE9Mg0KYj0zDQojV2UgY2FuIHR5cGUgVmlldyhhKSBpbiBjb25zb2xlIHRvIHNlZSBpbiBkZXRhaWwgb3VyIHZhcmlhYmxlDQpgYGANCg0KYGBge3J9DQojVGhlIHNlY29uZCBzeW1ib2wgaXMgcnVuIGV2ZXJ5dGhpbmcgdG8gdGhpcywgYnV0IG5vdCB0aGlzIG9uZQ0KYStiDQpgYGANCg0KIyMjVGVzdHMNCmBgYHtyfQ0KbGlzdCgiSm9obiIsIDE3OCwgVFJVRSlbWzFdXQ0KbGlzdCgiSm9obiIsIDE3OCwgVFJVRSlbWzJdXQ0KbGlzdCgiSm9obiIsIDE3OCwgVFJVRSlbWzNdXQ0KDQpiaWdMaXN0IDwtIGxpc3QoIkpvaG4iLDQyLCBsaXN0KCJNYXJ5IiwgMzUpKQ0KcHJpbnQoIlRoaXMgaXMgYmlnTGlzdCIpDQpwcmludChwYXN0ZShiaWdMaXN0W1sxXV0sIGJpZ0xpc3RbWzJdXSwgYmlnTGlzdFtbM11dKSkgI1ByaW50IGxlcyBkZXV4IGFsdGVybmF0aXZlcw0KYmlnTGlzdFtbM11dW1syXV0gI3ByaW50IHF1ZSAzNQ0KYGBgDQoNCiMjI0F0b21pYyBWZWN0b3JzDQpgYGB7cn0NCnBlcnNvbk5hbWUgPSBjKCJKb2huIiwgIk1hcnkiKQ0KaW50ZXJlc3RpbmdOdW1iZXJzID0gYygyLCAzLjE0MTIpDQpjb3ZpZFBvc2l0aXZlID0gYyhUUlVFLCBUUlVFLCBGKQ0KDQpwZXJzb25OYW1lIDwtIGMoIkpvaG4iLCAiTWFyeSIpDQppbnRlcmVzdGluZ051bWJlcnMgPC0gYygyLCAzLjE0MTIsIE5hTikNCmNvdmlkUG9zaXRpdmUgPC0gYyhUUlVFLCBUUlVFLCBGLCBOQSkNCg0KYygiSm9obiIsICJNYXJ5IikgLT4gcGVyc29uTmFtZQ0KYygyLCAzLjE0MTIpIC0+IGludGVyZXN0aW5nTnVtYmVycw0KYyhUUlVFLCBUUlVFLCBGKSAtPiBjb3ZpZFBvc2l0aXZlDQpgYGANCg0KDQojIyNpbmRleGVzDQpgYGB7cn0NCmxpc3QoIlRleHQiLCAxLCBGQUxTRSwgMi4zNDMpIC0+IGxpc3QxDQpwcmludChsaXN0MVtbMV1dKQ0KcHJpbnQocGFzdGUoIkZpcnN0IHZhbHVlIDoiLCBsaXN0MVtbMV1dLCJTZWNvbmQgdmFsdWUgOiIsIGxpc3QxW1szXV0pKQ0KDQoNCmBgYA0KDQoNCiMjIyBsb29wcw0KYGBge3J9DQpsaXN0MSA9IGxpc3QoIlRleHQiLCAxLCBGQUxTRSwgMi4zNDMpDQpmb3IgKGUgaW4gbGlzdDEpew0KICBwcmludChlKQ0KICBpZihlID09IEZBTFNFKXsNCiAgICBwcmludCgiaXQncyBGYWxzZSwgc28gYnJlYWsiKQ0KICAgIGJyZWFrDQogIH0NCn0NCmBgYA0KYGBge3J9DQojQ29sbGVjdGluZyB0eXBlIDogMm5kIG1ldGhvZCAobcOpdGhvZGUgbm9ybWFsZSBwYXIgb2JqZXQpDQojQ29sbGVjdCB2ZXJ0aWNhbGx5DQojQXRvbWljIHZlY3RvciAtLT4gY29sbGVjdCBkYXRhIGZyb20gdGhlIHNhbWUgdHlwZSB0b2dldGhlcg0KYygxMTEsIDExMSwgMTExLCAxKQ0KYygic2FsdXQiLCAic2FsdXQyIiwgInNhbHV0MyIpDQoNCmxpc3QoImEiLCAiYiIpDQpsaXN0KCJjIiwgImQiKQ0KbGlzdChsaXN0KCJhIiwgImIiKSwgbGlzdCgiYyIsICJkIikpDQoNCmBgYA0KDQoNCmBgYHtyfQ0KI05hbWUgdGhlIHZhbHVlcywgTk9UIEJJTkRJTkchISENCnBlcnNvbjEgPC0gbGlzdChhZ2U9MjUsIG5hbWU9IkplYW4iLCByZXZlbnVlPTEyMTM0LCAicmVzaWRlbmNlIGxvY2F0aW9uIj0xMjMxMikNCnBhc3RlMA0KDQoNCmxpc3QoDQogICIxc3QiPWxpc3QoKSwgDQogICIybmQiPWxpc3QoKSwuLi4NCikNCmBgYA0KYGBge3J9DQoucGFzc3dvcmQgPSAiYXNqZGhzYWlvaHNhIg0KYGBgDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ3RybCtBbHQrSSouDQoNCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ3RybCtTaGlmdCtLKiB0byBwcmV2aWV3IHRoZSBIVE1MIGZpbGUpLg0KDQpUaGUgcHJldmlldyBzaG93cyB5b3UgYSByZW5kZXJlZCBIVE1MIGNvcHkgb2YgdGhlIGNvbnRlbnRzIG9mIHRoZSBlZGl0b3IuIENvbnNlcXVlbnRseSwgdW5saWtlICpLbml0KiwgKlByZXZpZXcqIGRvZXMgbm90IHJ1biBhbnkgUiBjb2RlIGNodW5rcy4gSW5zdGVhZCwgdGhlIG91dHB1dCBvZiB0aGUgY2h1bmsgd2hlbiBpdCB3YXMgbGFzdCBydW4gaW4gdGhlIGVkaXRvciBpcyBkaXNwbGF5ZWQuDQo=</div>
 
 
 

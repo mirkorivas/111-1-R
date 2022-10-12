@@ -31,6 +31,7 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 
 a=2
 b=3
+#We can type View(a) in console to see in detail our variable
 ```
 
 ```{r}
@@ -57,8 +58,8 @@ interestingNumbers = c(2, 3.1412)
 covidPositive = c(TRUE, TRUE, F)
 
 personName <- c("John", "Mary")
-interestingNumbers <- c(2, 3.1412)
-covidPositive <- c(TRUE, TRUE, F)
+interestingNumbers <- c(2, 3.1412, NaN)
+covidPositive <- c(TRUE, TRUE, F, NA)
 
 c("John", "Mary") -> personName
 c(2, 3.1412) -> interestingNumbers
@@ -87,8 +88,34 @@ for (e in list1){
   }
 }
 ```
+```{r}
+#Collecting type : 2nd method (méthode normale par objet)
+#Collect vertically
+#Atomic vector --> collect data from the same type together
+c(111, 111, 111, 1)
+c("salut", "salut2", "salut3")
+
+list("a", "b")
+list("c", "d")
+list(list("a", "b"), list("c", "d"))
+
+```
 
 
+```{r}
+#Name the values, NOT BINDING!!!
+person1 <- list(age=25, name="Jean", revenue=12134, "residence location"=12312)
+paste0
+
+
+list(
+  "1st"=list(), 
+  "2nd"=list(),...
+)
+```
+```{r}
+.password = "asjdhsaiohsa"
+```
 
 
 
