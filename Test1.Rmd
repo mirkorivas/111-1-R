@@ -188,21 +188,148 @@ library("rjson")
 result <- fromJSON(file = "C:\\Users\\mirko\\Documents\\NTPUProg\\ProjetsR\\111-1-R\\json.json")
 
 # Print the result.
+print(result$ID[[1]])
 print(result)
+
+
+
+```
+```{r}
+myJourney<- list(
+    "morning"=list("shower", 
+                   "goToSchool"=c("MRT", "BUS")), 
+    "noon"=c("eat", ""),
+    "afternoon"=c("sports"),
+    "night"=c()
+)
+print(myJourney)
+
+
+
+list(
+  
+  
+  
+  
+)
+
 
 ```
 
 
+```{r}
+#En ayant fait library(jsonlite) dans la console
+#result <- fromJSON("C:\\Users\\mirko\\Documents\\NTPUProg\\ProjetsR\\111-1-R\\json.json")
+result <- fromJSON("./json.json")
+result2 <- fromJSON("https://gis.taiwan.net.tw/XMLReleaseALL_public/scenic_spot_C_f.json")
+#print(result)
+#print(result2)
+
+#print first few lines
+head(result)
+head(result2)
+```
+
+```{r}
+aq = fromJSON("https://data.epa.gov.tw/api/v2/aqx_p_432?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&limit=1000&sort=ImportDate%20desc&format=JSON", F)
+aq$records[[16]]$co
+```
+```{r}
+myTimetable <- list(
+"monday"=c(NA), #Not Available
+"tuesday"=c("financial data analysis", "economic forum"),
+"wednesday"=c("introduction to international politics", "programming for data science"),
+"thursday"=c("quality management"),
+"friday"=c("chinese")
+)
+myTimetable <- list(
+"monday"=c(), # Empty atomic vector
+"tuesday"=c("financial data analysis", "economic forum"),
+"wednesday"=c("introduction to international politics", "programming for data science"),
+"thursday"=c("quality management"),
+"friday"=c("chinese")
+)
+myTimetable <- list(
+"monday"=NULL, #Pure void
+"tuesday"=c("financial data analysis", "economic forum"),
+"wednesday"=c("introduction to international politics", "programming for data science"),
+"thursday"=c("quality management"),
+"friday"=c("chinese")
+)
+```
+
+```{r}
+JohnsFamily=c("name", "age")
 
 
+#JohnsFamily[c("name", "age")]
+#JohnsFamily[c(1,2)]
+#JohnsFamily[-c(1,2)]
+length(JohnsFamily)
+
+aa <- c("name1", "b", "c")
+names(aa) 
+aa
+#...
+
+#Replacements
+JohnsFamilyCopy1 <- JohnsFamily
+print(JohnsFamilyCopy1)
 
 
+JohnsFamilyCopy2 <- list(
+  "name"="John", "age"=35
+)
+JohnsFamilyCopy2[c("name", "age")] #Multiple retrieval
+JohnsFamilyCopy2[c("age", "name")] #Multiple retrieval
+JohnsFamilyCopy2[c(1, 2)] #Multiple retrieval
+JohnsFamilyCopy2[c("name", "age")] <- list("name"="John S.", "age"=36)
+JohnsFamilyCopy2[["name"]] <- "John S."
+JohnsFamilyCopy2[["age"]] <- 36
+
+```
 
 
+Exercice3.2
+```{r}
+concerts_obo <-
+  jsonlite::fromJSON("https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=17", simplifyDataFrame = F)
+NewConcerts_obo <- concerts_obo
+```
 
 
+Exercice3.3
+```{r}
+concerts_obo <-
+  jsonlite::fromJSON("https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=17", simplifyDataFrame = F)
+NewConcerts_obo <- concerts_obo
+# To retrieve the show time 
+## Right way
+NewConcerts_obo[[3]]$showInfo[[1]][["time"]]
+## Wrong way
+NewConcerts_obo[[3]]$showInfo[["time"]]
+## Therefore, the right replacement should be
+NewConcerts_obo[[3]]$showInfo[[1]][["time"]] <- "2022/01/31 19:30:00"
 
+NewConcerts_obo[[3]]$showInfo[[1]]
+NewConcerts_obo[[3]]$showInfo[[1]][c("time", "location")]
+```
 
+Exercice3.4 Create, Bind, Add Values
+```{r}
+a = c(1,7,3)
+#add a value
+a[[4]] <- 10 
+a
+length(a)
+#add 2 values 
+a[[5]] <- 2 
+a[[6]] <- 5 
+
+#Version 2
+b = c(1,7,3)
+
+```
 
 
 

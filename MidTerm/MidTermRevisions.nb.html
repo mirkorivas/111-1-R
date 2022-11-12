@@ -1768,392 +1768,305 @@ pre code {
 
 
 <!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-Notebook. When you execute code within the notebook, the results appear
-beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within
-the chunk or by placing your cursor inside it and pressing
-<em>Ctrl+Shift+Enter</em>.</p>
-<div id="h1" class="section level1">
-<h1>H1</h1>
-<div id="h2" class="section level2">
-<h2>h2</h2>
-<div id="h3" class="section level3">
-<h3>h3</h3>
-<div id="h4" class="section level4">
-<h4>h4…</h4>
+<p>Insérer une code chunk <em>Ctrl+Alt+I</em></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0NvbnRyb2wgKyBFbnRlciBpZiB3ZSB3YW50IHRvIHJ1biBqdXN0IG9uZSBsaW5lXG4jIHBsb3QoY2FycylcbiMgcHJpbnQoXCJIZWxsbyBXb3JsZFwiKVxuIyBwcmludChcIkhlbGxvIFdvcmxkIVwiLCBxdW90ZSA9IEZBTFNFKVxuIyBwcmludChwYXN0ZShcIkhvd1wiLFwiYXJlXCIsXCJ5b3U/XCIpKVxuIyBcbiMgZGllIDwtIDE6NlxuIyBwcmludChkaWUpXG4jIHByaW50KGRpZSAqIGMoMSwyKSlcbiMgcmVzdWx0IDwtIHNhbXBsZShkaWUsIHNpemUgPSAyLCByZXBsYWNlID0gVFJVRSlcbiMgcHJpbnQocmVzdWx0KVxuIyBzdW0ocmVzdWx0KVxuXG5hPTJcbmI9M1xuI1dlIGNhbiB0eXBlIFZpZXcoYSkgaW4gY29uc29sZSB0byBzZWUgaW4gZGV0YWlsIG91ciB2YXJpYWJsZVxuYGBgIn0= -->
-<pre class="r"><code>#Control + Enter if we want to run just one line
-# plot(cars)
-# print(&quot;Hello World&quot;)
-# print(&quot;Hello World!&quot;, quote = FALSE)
-# print(paste(&quot;How&quot;,&quot;are&quot;,&quot;you?&quot;))
-# 
-# die &lt;- 1:6
-# print(die)
-# print(die * c(1,2))
-# result &lt;- sample(die, size = 2, replace = TRUE)
-# print(result)
-# sum(result)
-
-a=2
-b=3
-#We can type View(a) in console to see in detail our variable</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0RpZmbDqXJlbmNlIGVudHJlIHBsb3QgZXQgcHJpbnRcbnBsb3QoY2FycylcbnByaW50KGNhcnMpXG5gYGAifQ== -->
+<pre class="r"><code>#Différence entre plot et print
+plot(cars)
+print(cars)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>Chapter 2 2.4 Data (Atomic)</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1RoZSBzZWNvbmQgc3ltYm9sIGlzIHJ1biBldmVyeXRoaW5nIHRvIHRoaXMsIGJ1dCBub3QgdGhpcyBvbmVcbmErYlxuYGBgIn0= -->
-<pre class="r"><code>#The second symbol is run everything to this, but not this one
-a+b</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXCJTdHJpbmdcIiAjXCJNYXJ5XCIsIFwiRUpIRsOkMTM0MVwiXG5OdW1lcmljICMyTCAoSW50ZWdlciksIDIoSW50ZWdlciksIDIuNChEb3VibGUpLCBcbkxvZ2ljYWwgI1RSVUUsIEZBTFNFXG5gYGAifQ== -->
+<pre class="r"><code>&quot;String&quot; #&quot;Mary&quot;, &quot;EJHFä1341&quot;
+Numeric #2L (Integer), 2(Integer), 2.4(Double), 
+Logical #TRUE, FALSE</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>###Tests</p>
+<p>2.5 Collections</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcIkpvaG5cIiwgMTc4LCBUUlVFKVtbMV1dXG5saXN0KFwiSm9oblwiLCAxNzgsIFRSVUUpW1syXV1cbmxpc3QoXCJKb2huXCIsIDE3OCwgVFJVRSlbWzNdXVxuXG5iaWdMaXN0IDwtIGxpc3QoXCJKb2huXCIsNDIsIGxpc3QoXCJNYXJ5XCIsIDM1KSlcbnByaW50KFwiVGhpcyBpcyBiaWdMaXN0XCIpXG5wcmludChwYXN0ZShiaWdMaXN0W1sxXV0sIGJpZ0xpc3RbWzJdXSwgYmlnTGlzdFtbM11dKSkgI1ByaW50IGxlcyBkZXV4IGFsdGVybmF0aXZlc1xuYmlnTGlzdFtbM11dW1syXV0gI3ByaW50IHF1ZSAzNVxuYGBgIn0= -->
-<pre class="r"><code>list(&quot;John&quot;, 178, TRUE)[[1]]
-list(&quot;John&quot;, 178, TRUE)[[2]]
-list(&quot;John&quot;, 178, TRUE)[[3]]
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0F0b21pYyBWZWN0b3IgY29udGFpbnMgb25seSB0aGUgc2FtZSB0eXBlIG9mIHZhbHVlXG5jKFwiSm9oblwiLCBcIk1hcnlcIilcbmMoMiwgMy4xNDEyKVxuYyhUUlVFLCBUUlVFLCBGKVxudHlwZW9mKGMoVFJVRSwgVFJVRSwgRikpICNEZXRlcm1pbsOpIHBhciBsZSB0eXBlIGRlcyBkb25uw6llcyhsb2dpY2FsKVxuXG4jTGlzdCAoZ2VuZXJhbCB2ZWN0b3IpIGNvbnRhaW5zIGRpZmZlcmVudCB0eXBlcyBvZiB2YWx1ZXNcbmxpc3QoXCJKb2huXCIsIDE3OCwgVFJVRSlcbnR5cGVvZihsaXN0KFwiSm9oblwiLCAxNzgsIFRSVUUpKVxuYGBgIn0= -->
+<pre class="r"><code>#Atomic Vector contains only the same type of value
+c(&quot;John&quot;, &quot;Mary&quot;)
+c(2, 3.1412)
+c(TRUE, TRUE, F)
+typeof(c(TRUE, TRUE, F)) #Determiné par le type des données(logical)
 
+#List (general vector) contains different types of values
+list(&quot;John&quot;, 178, TRUE)
+typeof(list(&quot;John&quot;, 178, TRUE))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.6 Values and element Values</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0Egc2luZ2xlIGJhc2ljIHR5cGUgdmFsdWUsIGEgdmVjdG9yIG9yIGEgbGlzdCBjYW4gcmVwcmVzZW50IGEgdmFsdWUhXG5cIkpvaG5cIlxuMTJcbmMoMiwgMy4xNDEyKVxubGlzdChcIkpvaG5cIiwgMTc4LCBUUlVFKVxuXG4jRWxlbWVudCB2YWx1ZSBpcyBhbiBlbGVtZW50IGluc2lkZSBvZiBhIHZlY3RvciBvciBhIGxpc3QgXG5saXN0KFwiSm9oblwiLCA1LCBUUlVFKSAjIGhhcyAzIGVsZW1lbnQgdmFsdWVzLlxubGlzdChcIkpvaG5cIiw0MiwgbGlzdChcIk1hcnlcIiwgMzUpKSAjIGhhcyBhbHNvIDMgZWxlbWVudCB2YWx1ZXMuISBcIk1hcnlcIiBpcyBub3QgYSBlbGVtZW50IHZhbHVlIG9mIHRoZSBiaWcgbGlzdCwgc2luY2UgaXQgaXMgaW4gYSBzbWFsbGVyIGluc2lkZSBhbm90aGVyIHZlY3RvciBcbmBgYCJ9 -->
+<pre class="r"><code>#A single basic type value, a vector or a list can represent a value!
+&quot;John&quot;
+12
+c(2, 3.1412)
+list(&quot;John&quot;, 178, TRUE)
+
+#Element value is an element inside of a vector or a list 
+list(&quot;John&quot;, 5, TRUE) # has 3 element values.
+list(&quot;John&quot;,42, list(&quot;Mary&quot;, 35)) # has also 3 element values.! &quot;Mary&quot; is not a element value of the big list, since it is in a smaller inside another vector </code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.7 Retrieve ONE element value by position</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0RvdWJsZSBicmFja2V0cyBbW11dXG5jKFwiSm9oblwiLCBcIk1hcnlcIilbWzFdXVxuYyhcIkpvaG5cIiwgXCJNYXJ5XCIpW1syXV1cblxuI1JldHJpZXZlIDM1XG5iaWdMaXN0IDwtIGxpc3QoXCJKb2huXCIsNDIsIGxpc3QoXCJNYXJ5XCIsIDM1KSlcbmJpZ0xpc3RbWzNdXVtbMl1dXG5cbiMhITIgdmVjdG9ycyBtYWtlIDFcbnZlY3RvciA8LSBjKGMoXCJtYXJ5XCIsIFwiSm9oblwiKSwgYygxLDIpKVxudmVjdG9yW1szXV1bWzFdXSAjISEhIFBhcmVpbCBwb3VyIHVuIHZlY3RldXIgcXVpIGNvbnRpZW50IGRlcyBsaXN0ZXMhXG5cbnZlY3RvcjIgPC0gbGlzdChjKFwibWFyeVwiLCBcIkpvaG5cIiksIGMoMSwyKSlcbnZlY3RvcjJbWzJdXVtbMV1dICNSZXRyaWV2ZSAxXG5gYGAifQ== -->
+<pre class="r"><code>#Double brackets [[]]
+c(&quot;John&quot;, &quot;Mary&quot;)[[1]]
+c(&quot;John&quot;, &quot;Mary&quot;)[[2]]
+
+#Retrieve 35
 bigList &lt;- list(&quot;John&quot;,42, list(&quot;Mary&quot;, 35))
-print(&quot;This is bigList&quot;)
-print(paste(bigList[[1]], bigList[[2]], bigList[[3]])) #Print les deux alternatives
-bigList[[3]][[2]] #print que 35</code></pre>
+bigList[[3]][[2]]
+
+#!!2 vectors make 1
+vector &lt;- c(c(&quot;mary&quot;, &quot;John&quot;), c(1,2))
+vector[[3]][[1]] #!!! Pareil pour un vecteur qui contient des listes!
+
+vector2 &lt;- list(c(&quot;mary&quot;, &quot;John&quot;), c(1,2))
+vector2[[2]][[1]] #Retrieve 1</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>###Atomic Vectors</p>
+<p>2.8 Binding (assign a name with a value)</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGVyc29uTmFtZSA9IGMoXCJKb2huXCIsIFwiTWFyeVwiKVxuaW50ZXJlc3RpbmdOdW1iZXJzID0gYygyLCAzLjE0MTIpXG5jb3ZpZFBvc2l0aXZlID0gYyhUUlVFLCBUUlVFLCBGKVxuXG5wZXJzb25OYW1lIDwtIGMoXCJKb2huXCIsIFwiTWFyeVwiKVxuaW50ZXJlc3RpbmdOdW1iZXJzIDwtIGMoMiwgMy4xNDEyLCBOYU4pXG5jb3ZpZFBvc2l0aXZlIDwtIGMoVFJVRSwgVFJVRSwgRiwgTkEpXG5cbmMoXCJKb2huXCIsIFwiTWFyeVwiKSAtPiBwZXJzb25OYW1lXG5jKDIsIDMuMTQxMikgLT4gaW50ZXJlc3RpbmdOdW1iZXJzXG5jKFRSVUUsIFRSVUUsIEYpIC0+IGNvdmlkUG9zaXRpdmVcbmBgYCJ9 -->
-<pre class="r"><code>personName = c(&quot;John&quot;, &quot;Mary&quot;)
-interestingNumbers = c(2, 3.1412)
-covidPositive = c(TRUE, TRUE, F)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0RpZmZlcmVuY2UgYmV0d2VlbiBCaW5kaW5nIGFuZCBOYW1lIGNhbGxcbnBlcnNvbk5hbWUxID0gYyhcIkpvaG5cIiwgXCJNYXJ5XCIpXG5wZXJzb25OYW1lMiA8LSBjKFwiSm9oblwiLCBcIk1hcnlcIilcbmMoXCJKb2huXCIsIFwiTWFyeVwiKSAtPiBwZXJzb25OYW1lM1xuXG5wZXJzb25OYW1lNCA9IGxpc3QoXCJKb2huXCIsIFwiTWFyeVwiKVxucGVyc29uTmFtZTUgPC0gbGlzdChcIkpvaG5cIiwgXCJNYXJ5XCIpXG5saXN0KFwiSm9oblwiLCBcIk1hcnlcIikgLT4gcGVyc29uTmFtZTZcblxucGVyc29uTmFtZTFbWzJdXVxucGVyc29uTmFtZTRbWzJdXVxuXG4jTmFtZSBjYWxsc1xuZWxlbWVudDEgPC0gXCJhXCJcbmVsZW1lbnQyIDwtIFwiYlwiXG5jKGVsZW1lbnQxLCBlbGVtZW50MikgIyB0aGVyZSBhcmUgdHdvIG5hbWUgY2FsbHNcbmBgYCJ9 -->
+<pre class="r"><code>#Difference between Binding and Name call
+personName1 = c(&quot;John&quot;, &quot;Mary&quot;)
+personName2 &lt;- c(&quot;John&quot;, &quot;Mary&quot;)
+c(&quot;John&quot;, &quot;Mary&quot;) -&gt; personName3
 
-personName &lt;- c(&quot;John&quot;, &quot;Mary&quot;)
-interestingNumbers &lt;- c(2, 3.1412, NaN)
-covidPositive &lt;- c(TRUE, TRUE, F, NA)
+personName4 = list(&quot;John&quot;, &quot;Mary&quot;)
+personName5 &lt;- list(&quot;John&quot;, &quot;Mary&quot;)
+list(&quot;John&quot;, &quot;Mary&quot;) -&gt; personName6
 
-c(&quot;John&quot;, &quot;Mary&quot;) -&gt; personName
-c(2, 3.1412) -&gt; interestingNumbers
-c(TRUE, TRUE, F) -&gt; covidPositive</code></pre>
+personName1[[2]]
+personName4[[2]]
+
+#Name calls
+element1 &lt;- &quot;a&quot;
+element2 &lt;- &quot;b&quot;
+c(element1, element2) # there are two name calls</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>###indexes</p>
+<p>Some valid names for Binding</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChcIlRleHRcIiwgMSwgRkFMU0UsIDIuMzQzKSAtPiBsaXN0MVxucHJpbnQobGlzdDFbWzFdXSlcbnByaW50KHBhc3RlKFwiRmlyc3QgdmFsdWUgOlwiLCBsaXN0MVtbMV1dLFwiU2Vjb25kIHZhbHVlIDpcIiwgbGlzdDFbWzNdXSkpXG5cblxuYGBgIn0= -->
-<pre class="r"><code>list(&quot;Text&quot;, 1, FALSE, 2.343) -&gt; list1
-print(list1[[1]])
-print(paste(&quot;First value :&quot;, list1[[1]],&quot;Second value :&quot;, list1[[3]]))
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfMTA4X3RvdGFsX2NyZWRpdHMgPC0gMTVcbm15LjEwOC50b3RhbF9jcmVkaXRzIDwtIDE1XG4ubXkuMTA4LnRvdGFsX2NyZWRpdHMgPC0gMTUgI3N0YXJ0IHdpdGggLiB3aWxsIGhpZGUgbmFtZVxuYC4xMDgudG90YWxfY3JlZGl0c2AgPC0gMTUgI2lycmVndWxhciBuYW1lLCBgIGlzIG5vdCBwYXJ0IG9mIHRoZSBuYW1lXG5gMTA4IHRvdGFsIGNyZWRpdHNgIDwtIDE1XG5gYGAifQ== -->
+<pre class="r"><code>my_108_total_credits &lt;- 15
+my.108.total_credits &lt;- 15
+.my.108.total_credits &lt;- 15 #start with . will hide name
+`.108.total_credits` &lt;- 15 #irregular name, ` is not part of the name
+`108 total credits` &lt;- 15</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-</div>
-</div>
-<div id="loops" class="section level3">
-<h3>loops</h3>
+<p>2.9 Concatenate</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdDEgPSBsaXN0KFwiVGV4dFwiLCAxLCBGQUxTRSwgMi4zNDMpXG5mb3IgKGUgaW4gbGlzdDEpe1xuICBwcmludChlKVxuICBpZihlID09IEZBTFNFKXtcbiAgICBwcmludChcIml0J3MgRmFsc2UsIHNvIGJyZWFrXCIpXG4gICAgYnJlYWtcbiAgfVxufVxuYGBgIn0= -->
-<pre class="r"><code>list1 = list(&quot;Text&quot;, 1, FALSE, 2.343)
-for (e in list1){
-  print(e)
-  if(e == FALSE){
-    print(&quot;it&#39;s False, so break&quot;)
-    break
-  }
-}</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0NvbmNhdGVuYXRlIGF0b21pYyB2ZWN0b3JzXG50eXBlb2YoYyhcImFcIiwgXCJiXCIpKVxudHlwZW9mKGMoXCJjXCIsIFwiZFwiKSlcbmMoYyhcImFcIiwgXCJiXCIpLCBjKFwiY1wiLCBcImRcIikpIFxuXG4jQ29uY2F0ZW5hdGUgZGVzIGxpc3RlcyDDoCBsJ2FpZGUgZCd1biB2ZWN0ZXVyXG5saXN0ZSA9IGMobGlzdChcImFcIiwgMSksIGxpc3QoXCJjXCIsIDIpKVxubGlzdGVbWzRdXVxubGlzdGVcblxuI0NvbmNhdGVuYXRlIGxlIHBhc3RlXG5wYXN0ZTAoXCJzYWx1dFwiLCBcImplYW5cIilcbnBhc3RlKFwic2FsdXRcIiwgXCJqZWFuXCIpXG5gYGAifQ== -->
+<pre class="r"><code>#Concatenate atomic vectors
+typeof(c(&quot;a&quot;, &quot;b&quot;))
+typeof(c(&quot;c&quot;, &quot;d&quot;))
+c(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;)) 
+
+#Concatenate des listes à l&#39;aide d&#39;un vecteur
+liste = c(list(&quot;a&quot;, 1), list(&quot;c&quot;, 2))
+liste[[4]]
+liste
+
+#Concatenate le paste
+paste0(&quot;salut&quot;, &quot;jean&quot;)
+paste(&quot;salut&quot;, &quot;jean&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>2.10 List</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0NvbGxlY3RpbmcgdHlwZSA6IDJuZCBtZXRob2QgKG3DqXRob2RlIG5vcm1hbGUgcGFyIG9iamV0KVxuI0NvbGxlY3QgdmVydGljYWxseVxuI0F0b21pYyB2ZWN0b3IgLS0+IGNvbGxlY3QgZGF0YSBmcm9tIHRoZSBzYW1lIHR5cGUgdG9nZXRoZXJcbmMoMTExLCAxMTEsIDExMSwgMSlcbmMoXCJzYWx1dFwiLCBcInNhbHV0MlwiLCBcInNhbHV0M1wiKVxuXG5saXN0KFwiYVwiLCBcImJcIilcbmxpc3QoXCJjXCIsIFwiZFwiKVxubGlzdChsaXN0KFwiYVwiLCBcImJcIiksIGxpc3QoXCJjXCIsIFwiZFwiKSlcbmBgYCJ9 -->
-<pre class="r"><code>#Collecting type : 2nd method (méthode normale par objet)
-#Collect vertically
-#Atomic vector --&gt; collect data from the same type together
-c(111, 111, 111, 1)
-c(&quot;salut&quot;, &quot;salut2&quot;, &quot;salut3&quot;)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlzdChjKFwiYVwiLCBcImJcIiksIGMoXCJjXCIsIFwiZFwiKSkgIyAoMSlcbiMgc28gKDEpIGlzIG5vdCB0aGUgc2FtZSBhc1xubGlzdChcImFcIiwgXCJiXCIsIFwiY1wiLCBcImRcIilcblxuI1RoZXNlIHR3byBhcmUgbm90IHRoZSBzYW1lIHRvb1xuYyhjKFwiYVwiLCBcImJcIiksIGMoXCJjXCIsIFwiZFwiKSlbWzFdXVxubGlzdChjKFwiYVwiLCBcImJcIiksIGMoXCJjXCIsIFwiZFwiKSlbWzFdXSAjIEVycm9yXG5cbiNDb2VyY2lvblxuY29lcmNpb24gPC0gYyhjKFwiYVwiLCBcImJcIiksIGMoMSwgMjIpKVxudHlwZW9mKGNvZXJjaW9uW1szXV0pXG4jY29lcmNpb25bWzNdXSArIDIgI0Vycm9yIFxuXG4jV2l0aCBvdGhlcnMgdGhhbiBjaGFyYWN0ZXJcbmNvZXJjaW9uMiA8LSBjKGMoMSwyKSwgYyhUUlVFLCBGQUxTRSkpXG5jb2VyY2lvbjJcbmNvZXJjaW9uMyA8LSBjKGMoVFJVRSwgRkFMU0UpLCBjKDEsMikpXG5jb2VyY2lvbjNcbmBgYCJ9 -->
+<pre class="r"><code>list(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;)) # (1)
+# so (1) is not the same as
+list(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;)
 
-list(&quot;a&quot;, &quot;b&quot;)
-list(&quot;c&quot;, &quot;d&quot;)
-list(list(&quot;a&quot;, &quot;b&quot;), list(&quot;c&quot;, &quot;d&quot;))</code></pre>
+#These two are not the same too
+c(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;))[[1]]
+list(c(&quot;a&quot;, &quot;b&quot;), c(&quot;c&quot;, &quot;d&quot;))[[1]] # Error
+
+#Coercion
+coercion &lt;- c(c(&quot;a&quot;, &quot;b&quot;), c(1, 22))
+typeof(coercion[[3]])
+#coercion[[3]] + 2 #Error 
+
+#With others than character
+coercion2 &lt;- c(c(1,2), c(TRUE, FALSE))
+coercion2
+coercion3 &lt;- c(c(TRUE, FALSE), c(1,2))
+coercion3</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>2.11 Sampled data (Observation by observation)</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI05hbWUgdGhlIHZhbHVlcywgTk9UIEJJTkRJTkchISFcbnBlcnNvbjEgPC0gbGlzdChhZ2U9MjUsIG5hbWU9XCJKZWFuXCIsIHJldmVudWU9MTIxMzQsIFwicmVzaWRlbmNlIGxvY2F0aW9uXCI9MTIzMTIpXG5wYXN0ZTBcblxuXG5saXN0KFxuICBcIjFzdFwiPWxpc3QoKSwgXG4gIFwiMm5kXCI9bGlzdCgpLC4uLlxuKVxuYGBgIn0= -->
-<pre class="r"><code>#Name the values, NOT BINDING!!!
-person1 &lt;- list(age=25, name=&quot;Jean&quot;, revenue=12134, &quot;residence location&quot;=12312)
-paste0
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2FnZSwgZ2VuZGVyLCByZXNpZGVudGlhbCBkaXN0cmljdCwgZXRjXG5saXN0KDU0LCBcIm1hbGVcIiwgXCJub3J0aFwiLCAxMDApICMgKDEpXG5saXN0KDMyLCBcImZlbWFsZVwiLCBcInNvdXRoXCIsIDI1KSAjICgyKVxubGlzdCgyOCwgXCJmZW1hbGVcIiwgXCJlYXN0XCIsIE5BKSAjICgzKSBOQSAtPiBJZiB2YWx1ZSBub3QgYXNzaWduZWQgXG5saXN0KDIwLCBcIm1hbGVcIiwgXCJlYXN0XCIsIDc3KSAjICg0KVxuXG4jUHV0IGFsbCB0b2dldGhlclxub0J5TzEgPC0gbGlzdChcbiAgbGlzdCg1NCwgXCJtYWxlXCIsIFwibm9ydGhcIiwgMTAwKSwgIyAoMSlcbiAgbGlzdCgzMiwgXCJmZW1hbGVcIiwgXCJzb3V0aFwiLCAyNSksICMgKDIpXG4gIGxpc3QoMjgsIFwiZmVtYWxlXCIsIFwiZWFzdFwiLCBOQSksICMgKDMpXG4gIGxpc3QoMjAsIFwibWFsZVwiLCBcImVhc3RcIiwgNzcpICMgKDQpXG4pXG5cbiNXaHkgbm90IGluIGFuIGF0b21pYyB2ZWN0b3I/IFxub0J5TzIgPC0gYyhcbiAgbGlzdCg1NCwgXCJtYWxlXCIsIFwibm9ydGhcIiwgMTAwKSwgIyAoMSlcbiAgbGlzdCgzMiwgXCJmZW1hbGVcIiwgXCJzb3V0aFwiLCAyNSksICMgKDIpXG4gIGxpc3QoMjgsIFwiZmVtYWxlXCIsIFwiZWFzdFwiLCBOQSksICMgKDMpXG4gIGxpc3QoMjAsIFwibWFsZVwiLCBcImVhc3RcIiwgNzcpICMgKDQpXG4pXG5wZXJzb25zMiAjTWV0IHRvdXQgc3VyIHVuIG3Dqm1lIGV0IHNldWwgbml2ZWF1IChjb21tZSB1bmUgYmlnIGxpc3RlIHF1aSBjb250aWVudCB0b3V0ZXMgbGVzIHZhbGV1cnMgw6AgbGEgc3VpdGUpXG5gYGAifQ== -->
+<pre class="r"><code>#age, gender, residential district, etc
+list(54, &quot;male&quot;, &quot;north&quot;, 100) # (1)
+list(32, &quot;female&quot;, &quot;south&quot;, 25) # (2)
+list(28, &quot;female&quot;, &quot;east&quot;, NA) # (3) NA -&gt; If value not assigned 
+list(20, &quot;male&quot;, &quot;east&quot;, 77) # (4)
 
+#Put all together
+oByO1 &lt;- list(
+  list(54, &quot;male&quot;, &quot;north&quot;, 100), # (1)
+  list(32, &quot;female&quot;, &quot;south&quot;, 25), # (2)
+  list(28, &quot;female&quot;, &quot;east&quot;, NA), # (3)
+  list(20, &quot;male&quot;, &quot;east&quot;, 77) # (4)
+)
 
+#Why not in an atomic vector? 
+oByO2 &lt;- c(
+  list(54, &quot;male&quot;, &quot;north&quot;, 100), # (1)
+  list(32, &quot;female&quot;, &quot;south&quot;, 25), # (2)
+  list(28, &quot;female&quot;, &quot;east&quot;, NA), # (3)
+  list(20, &quot;male&quot;, &quot;east&quot;, 77) # (4)
+)
+persons2 #Met tout sur un même et seul niveau (comme une big liste qui contient toutes les valeurs à la suite)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.11 (Feature by feature)</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI1B1dCBhbGwgdG9nZXRoZXJcbmZCeUYgPC0gbGlzdChcbiAgYyg1NCwgMzIsIDI4LCAyMCksICMgYWdlXG4gIGMoXCJtYWxlXCIsIFwiZmVtYWxlXCIsIFwiZmVtYWxlXCIsIFwibWFsZVwiKSwgIyBnZW5kZXJcbiAgYyhcIm5vcnRoXCIsIFwic291dGhcIiwgXCJlYXN0XCIsIFwiZWFzdFwiKSwgIyByZXNpZGVuY2VcbiAgYygxMDAsIDI1LCBOQSwgNzcpICMgaW5jb21lICBcbilcblxuI1doeSBub3QgaW4gYW4gYXRvbWljIHZlY3Rvcj8gXG5mQnlGMiA8LSBjKFxuICBjKDU0LCAzMiwgMjgsIDIwKSwgIyBhZ2VcbiAgYyhcIm1hbGVcIiwgXCJmZW1hbGVcIiwgXCJmZW1hbGVcIiwgXCJtYWxlXCIpLCAjIGdlbmRlclxuICBjKFwibm9ydGhcIiwgXCJzb3V0aFwiLCBcImVhc3RcIiwgXCJlYXN0XCIpLCAjIHJlc2lkZW5jZVxuICBjKDEwMCwgMjUsIE5BLCA3NykgIyBpbmNvbWUgIFxuKVxuZkJ5RjIgI01ldCB0b3V0IHN1ciB1biBtw6ptZSBldCBzZXVsIG5pdmVhdSAoY29tbWUgdW5lIGJpZyBsaXN0ZSBxdWkgY29udGllbnQgdG91dGVzIGxlcyB2YWxldXJzIMOgIGxhIHN1aXRlKVxuYGBgIn0= -->
+<pre class="r"><code>#Put all together
+fByF &lt;- list(
+  c(54, 32, 28, 20), # age
+  c(&quot;male&quot;, &quot;female&quot;, &quot;female&quot;, &quot;male&quot;), # gender
+  c(&quot;north&quot;, &quot;south&quot;, &quot;east&quot;, &quot;east&quot;), # residence
+  c(100, 25, NA, 77) # income  
+)
+
+#Why not in an atomic vector? 
+fByF2 &lt;- c(
+  c(54, 32, 28, 20), # age
+  c(&quot;male&quot;, &quot;female&quot;, &quot;female&quot;, &quot;male&quot;), # gender
+  c(&quot;north&quot;, &quot;south&quot;, &quot;east&quot;, &quot;east&quot;), # residence
+  c(100, 25, NA, 77) # income  
+)
+fByF2 #Met tout sur un même et seul niveau (comme une big liste qui contient toutes les valeurs à la suite)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.12 Named element values</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBhdG9taWMgdmVjdG9yXG5jKFwiSm9oblwiPTE3NywgXCJNYXJ5XCI9MTYwLCBcIkJpbGxcIj0xNzApXG4jIGxpc3Rcbmxpc3QoXCJKb2huXCI9MTc3LCBcIk1hcnlcIj0xNjAsIFwiQmlsbFwiPTE3MClcblxuI1dpdGggaXJyZWd1bGFyIG5hbWVcbmxpc3QoXG4gIFwiMXN0IE9ic2VydmF0aW9uXCI9bGlzdCg1NCwgXCJtYWxlXCIsIFwibm9ydGhcIiwgMTAwKSwgXG4gIFwiMm5kIE9ic2VydmF0aW9uXCI9bGlzdCgzMiwgXCJmZW1hbGVcIiwgXCJzb3V0aFwiLCAyNSksIFxuICBcIjNyZCBPYnNlcnZhdGlvblwiPWxpc3QoMjgsIFwiZmVtYWxlXCIsIFwiZWFzdFwiLCBOQSksIFxuICBcIjR0aCBPYnNlcnZhdGlvblwiPWxpc3QoMjAsIFwibWFsZVwiLCBcImVhc3RcIiwgNzcpIFxuKVxuXG4jV2l0aCByZWd1bGFyIG5hbWVcbnBlcnNvbkluZm8gPSBsaXN0KFxuICBmaXJzdE9ic2VydmF0aW9uPWxpc3QoNTQsIFwibWFsZVwiLCBcIm5vcnRoXCIsIDEwMCksIFxuICBzZWNvbmRPYnNlcnZhdGlvbj1saXN0KDMyLCBcImZlbWFsZVwiLCBcInNvdXRoXCIsIDI1KVxuICApXG5cbiNSZXRyaWV2ZSB2YWx1ZXMgXG5wZXJzb25JbmZvW1syXV1cbnBlcnNvbkluZm9bW1wiZmlyc3RPYnNlcnZhdGlvblwiXV1cbnBlcnNvbkluZm9bW1wic2Vjb25kT2JzZXJ2YXRpb25cIl1dW1sxXV1cbmBgYCJ9 -->
+<pre class="r"><code># atomic vector
+c(&quot;John&quot;=177, &quot;Mary&quot;=160, &quot;Bill&quot;=170)
+# list
+list(&quot;John&quot;=177, &quot;Mary&quot;=160, &quot;Bill&quot;=170)
+
+#With irregular name
 list(
-  &quot;1st&quot;=list(), 
-  &quot;2nd&quot;=list(),...
-)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuLnBhc3N3b3JkID0gXCJhc2pkaHNhaW9oc2FcIlxuYGBgIn0= -->
-<pre class="r"><code>.password = &quot;asjdhsaiohsa&quot;</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYyhcImpvaG5cIiwgXCJtYXJ5XCIpIC0+IGxpc3RcbmZvciAoZSBpbiBsaXN0KXtcbiAgcHJpbnQoZSlcbn1cblxuXG4jQXRvbWljIFZlY3RvclxuYygyLjMsIDQsIDUuMylcbmMoXCJBMVwiPVRSVUUsXCJBMlwiPUZBTFNFLFwiQTNcIj1UUlVFKSAtPiB2ZWN0b3IxXG5wcmludCh2ZWN0b3IxKVxuXG4jTm9uIEF0b21pYyBWZWN0b3Jcbmxpc3QoXCJuYW1lXCI9XCJKb2huXCIsXCJoZWlnaHRcIj0xNzcsXCJhZ2VcIj0zOCwgXCJtYXJyaWVkXCI9VFJVRSkgLT5qb2huSW5mb1xucHJpbnQoam9obkluZm8pXG5cblxuI1JldHJpZXZlIGVsZW1lbnRzIGZyb20gdGhlIHZlY3RvcnNcbiNTZWNvbmQgdmFsdWUgb2YgdmVjdG9yMSAmIGpvaG4gSW5mb1xucHJpbnQodmVjdG9yMVtbMl1dKVxucHJpbnQoam9obkluZm9bWzJdXSlcbiNJcyBqb2huIG1hcnJpZWRcbnByaW50KGpvaG5JbmZvW1tcIm1hcnJpZWRcIl1dKVxuXG5cbiNMaXN0ZXMgaW1icmlxdWXDqXMgXG5zYW1wbGVfZGF0YSA8LSBsaXN0KFxuICBcIm9ic2VydmF0aW9uMVwiPWxpc3QoXCJtYXJyaWVkXCI9VFJVRSxcIm5hbWVcIj1cIkpvaG5cIiksIFxuICBcIm9ic2VydmF0aW9uMlwiPWxpc3QoXCJtYXJyaWVkXCI9RkFMU0UsXCJuYW1lXCI9XCJNYXJ5XCIpLCBcbiAgXCJvYnNlcnZhdGlvbjNcIj1saXN0KFwibWFycmllZFwiPVRSVUUsXCJuYW1lXCI9XCJTdGV2ZW5cIilcbilcbnByaW50KHNhbXBsZV9kYXRhKVxuXG4jZ2V0IG5hbWUgb2Ygc3RldmVuXG5wcmludChzYW1wbGVfZGF0YVtbM11dW1syXV0pXG5wcmludChzYW1wbGVfZGF0YVtbXCJvYnNlcnZhdGlvbjNcIl1dW1tcIm5hbWVcIl1dKVxucHJpbnQoc2FtcGxlX2RhdGEkb2JzZXJ2YXRpb24zJG5hbWUpXG5gYGAifQ== -->
-<pre class="r"><code>c(&quot;john&quot;, &quot;mary&quot;) -&gt; list
-for (e in list){
-  print(e)
-}
-
-
-#Atomic Vector
-c(2.3, 4, 5.3)
-c(&quot;A1&quot;=TRUE,&quot;A2&quot;=FALSE,&quot;A3&quot;=TRUE) -&gt; vector1
-print(vector1)
-
-#Non Atomic Vector
-list(&quot;name&quot;=&quot;John&quot;,&quot;height&quot;=177,&quot;age&quot;=38, &quot;married&quot;=TRUE) -&gt;johnInfo
-print(johnInfo)
-
-
-#Retrieve elements from the vectors
-#Second value of vector1 &amp; john Info
-print(vector1[[2]])
-print(johnInfo[[2]])
-#Is john married
-print(johnInfo[[&quot;married&quot;]])
-
-
-#Listes imbriqueés 
-sample_data &lt;- list(
-  &quot;observation1&quot;=list(&quot;married&quot;=TRUE,&quot;name&quot;=&quot;John&quot;), 
-  &quot;observation2&quot;=list(&quot;married&quot;=FALSE,&quot;name&quot;=&quot;Mary&quot;), 
-  &quot;observation3&quot;=list(&quot;married&quot;=TRUE,&quot;name&quot;=&quot;Steven&quot;)
+  &quot;1st Observation&quot;=list(54, &quot;male&quot;, &quot;north&quot;, 100), 
+  &quot;2nd Observation&quot;=list(32, &quot;female&quot;, &quot;south&quot;, 25), 
+  &quot;3rd Observation&quot;=list(28, &quot;female&quot;, &quot;east&quot;, NA), 
+  &quot;4th Observation&quot;=list(20, &quot;male&quot;, &quot;east&quot;, 77) 
 )
-print(sample_data)
 
-#get name of steven
-print(sample_data[[3]][[2]])
-print(sample_data[[&quot;observation3&quot;]][[&quot;name&quot;]])
-print(sample_data$observation3$name)</code></pre>
+#With regular name
+personInfo = list(
+  firstObservation=list(54, &quot;male&quot;, &quot;north&quot;, 100), 
+  secondObservation=list(32, &quot;female&quot;, &quot;south&quot;, 25)
+  )
+
+#Retrieve values 
+personInfo[[2]]
+personInfo[[&quot;firstObservation&quot;]]
+personInfo[[&quot;secondObservation&quot;]][[1]]</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<p>2.13 Retrieve element value by element name</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YS5lbnRyeShcInNhbHV0XCIpIC0+IHZhclxucHJpbnQodmFyKVxuYGBgIn0= -->
-<pre class="r"><code>data.entry(&quot;salut&quot;) -&gt; var
-print(var)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2FtcGxlX2RhdGEgPC0gXG4gIGxpc3QoXG4gICAgXCIxc3QgT2JzZXJ2YXRpb25cIj1saXN0KDU0LCBcIm1hbGVcIiwgXCJub3J0aFwiLCAxMDApLCBcbiAgICBcIjJuZCBPYnNlcnZhdGlvblwiPWxpc3QoMzIsIFwiZmVtYWxlXCIsIFwic291dGhcIiwgMjUpLCBcbiAgICBcIjNyZCBPYnNlcnZhdGlvblwiPWxpc3QoMjgsIFwiZmVtYWxlXCIsIFwiZWFzdFwiLCBOQSksIFxuICAgIFwiNHRoIE9ic2VydmF0aW9uXCI9bGlzdCgyMCwgXCJtYWxlXCIsIFwiZWFzdFwiLCA3NylcbiAgKVxuc2FtcGxlX2RhdGFbW1wiNHRoIE9ic2VydmF0aW9uXCJdXVxuXG4jVmVjdG9yXG5hIDwtIGMoMSwgMywgZWxlbWVudE5hbWU9NylcbmFbWzFdXVxuYVtbXCJlbGVtZW50TmFtZVwiXV1cbiNhW1tlbGVtZW50TmFtZV1dICNOb3Qgd29yayBcbiNhW1tgZWxlbWVudE5hbWVgXV0gI05vdCBXb3JrXG5cbiNUaGlzIHdvcmtzIGJlY2F1c2UgYmVjYXVzZSB0YXJnZXROYW1lIGlzIFwiZWxlbWVudE5hbWVcIlxudGFyZ2V0TmFtZSA8LSBcImVsZW1lbnROYW1lXCJcbmFbW3RhcmdldE5hbWVdXVxuYGBgIn0= -->
+<pre class="r"><code>sample_data &lt;- 
+  list(
+    &quot;1st Observation&quot;=list(54, &quot;male&quot;, &quot;north&quot;, 100), 
+    &quot;2nd Observation&quot;=list(32, &quot;female&quot;, &quot;south&quot;, 25), 
+    &quot;3rd Observation&quot;=list(28, &quot;female&quot;, &quot;east&quot;, NA), 
+    &quot;4th Observation&quot;=list(20, &quot;male&quot;, &quot;east&quot;, 77)
+  )
+sample_data[[&quot;4th Observation&quot;]]
+
+#Vector
+a &lt;- c(1, 3, elementName=7)
+a[[1]]
+a[[&quot;elementName&quot;]]
+#a[[elementName]] #Not work 
+#a[[`elementName`]] #Not Work
+
+#This works because because targetName is &quot;elementName&quot;
+targetName &lt;- &quot;elementName&quot;
+a[[targetName]]</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwic2FsdXRcIlxuIn0= -->
-<pre><code>[1] &quot;salut&quot;</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>2.14 list only $ extractor</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2FtcGxlX2RhdGEgPC0gbGlzdChcbiAgXCJvYnNlcnZhdGlvbjFcIj1saXN0KDU0LCBcIm1hbGVcIiwgXCJub3J0aFwiLCAxMDApLCBcbiAgXCJvYnNlcnZhdGlvbjJcIj1saXN0KDMyLCBcImZlbWFsZVwiLCBcInNvdXRoXCIsIDI1KSwgXG4gIFwib2JzZXJ2YXRpb24zXCI9bGlzdCgyOCwgXCJmZW1hbGVcIiwgXCJlYXN0XCIsIE5BKSwgXG4gIFwib2JzZXJ2YXRpb240XCI9bGlzdCgyMCwgXCJtYWxlXCIsIFwiZWFzdFwiLCA3NylcbilcbnNhbXBsZV9kYXRhW1tcIm9ic2VydmF0aW9uNFwiXV1bWzFdXVxuYGBgIn0= -->
+<pre class="r"><code>sample_data &lt;- list(
+  &quot;observation1&quot;=list(54, &quot;male&quot;, &quot;north&quot;, 100), 
+  &quot;observation2&quot;=list(32, &quot;female&quot;, &quot;south&quot;, 25), 
+  &quot;observation3&quot;=list(28, &quot;female&quot;, &quot;east&quot;, NA), 
+  &quot;observation4&quot;=list(20, &quot;male&quot;, &quot;east&quot;, 77)
+)
+sample_data[[&quot;observation4&quot;]][[1]]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIwXG4ifQ== -->
+<pre><code>[1] 20</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2FtcGxlX2RhdGEkXCJvYnNlcnZhdGlvbjRcIltbMV1dXG5gYGAifQ== -->
+<pre class="r"><code>sample_data$&quot;observation4&quot;[[1]]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIwXG4ifQ== -->
+<pre><code>[1] 20</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2FtcGxlX2RhdGEkYG9ic2VydmF0aW9uNGBbWzFdXVxuYGBgIn0= -->
+<pre class="r"><code>sample_data$`observation4`[[1]]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIwXG4ifQ== -->
+<pre><code>[1] 20</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2FtcGxlX2RhdGEkb2JzZXJ2YXRpb240W1sxXV1cbmBgYCJ9 -->
+<pre class="r"><code>sample_data$observation4[[1]]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIwXG4ifQ== -->
+<pre><code>[1] 20</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Read CSV</p>
 <!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI215ZGF0YT1yZWFkLnRhYmxlKGZpbGU9ZmlsZS5jaG9vc2UoKSwrIHNlcCA9XCIsXCIsKyBoZWFkZXI9VFJVRSkgXG5cbm15ZGF0YSA8LSByZWFkLnRhYmxlKFwiQzpcXFxcVXNlcnNcXFxcbWlya29cXFxcRG9jdW1lbnRzXFxcXE5UUFVQcm9nXFxcXFByb2pldHNSXFxcXDExMS0xLVJcXFxcY2l0aWVzLmNzdlwiLFxuICAgIGhlYWRlcj1UUlVFLCBzZXA9XCIsXCIgXG4pIFxucHJpbnQobXlkYXRhKVxuXG5teWRhdGEyIDwtIHJlYWQuY3N2KFwiQzpcXFxcVXNlcnNcXFxcbWlya29cXFxcRG9jdW1lbnRzXFxcXE5UUFVQcm9nXFxcXFByb2pldHNSXFxcXDExMS0xLVJcXFxcY2l0aWVzLmNzdlwiLFxuICAgIGhlYWRlcj1UUlVFLCBzZXA9XCIsXCIgXG4pIFxucHJpbnQobXlkYXRhMilcbmZvciAoYyBpbiBteWRhdGEyKXtcbiAgcHJpbnQoYylcbn1cblxuYGBgIn0= -->
-<pre class="r"><code>#mydata=read.table(file=file.choose(),+ sep =&quot;,&quot;,+ header=TRUE) 
 
-mydata &lt;- read.table(&quot;C:\\Users\\mirko\\Documents\\NTPUProg\\ProjetsR\\111-1-R\\cities.csv&quot;,
-    header=TRUE, sep=&quot;,&quot; 
-) 
-print(mydata)
-
-mydata2 &lt;- read.csv(&quot;C:\\Users\\mirko\\Documents\\NTPUProg\\ProjetsR\\111-1-R\\cities.csv&quot;,
-    header=TRUE, sep=&quot;,&quot; 
-) 
-print(mydata2)
-for (c in mydata2){
-  print(c)
-}
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBMb2FkIHRoZSBwYWNrYWdlIHJlcXVpcmVkIHRvIHJlYWQgSlNPTiBmaWxlcy5cbmxpYnJhcnkoXCJyanNvblwiKVxuXG4jIEdpdmUgdGhlIGlucHV0IGZpbGUgbmFtZSB0byB0aGUgZnVuY3Rpb24uXG5yZXN1bHQgPC0gZnJvbUpTT04oZmlsZSA9IFwiQzpcXFxcVXNlcnNcXFxcbWlya29cXFxcRG9jdW1lbnRzXFxcXE5UUFVQcm9nXFxcXFByb2pldHNSXFxcXDExMS0xLVJcXFxcanNvbi5qc29uXCIpXG5cbiMgUHJpbnQgdGhlIHJlc3VsdC5cbnByaW50KHJlc3VsdCRJRFtbMV1dKVxucHJpbnQocmVzdWx0KVxuXG5cblxuYGBgIn0= -->
-<pre class="r"><code># Load the package required to read JSON files.
-library(&quot;rjson&quot;)
-
-# Give the input file name to the function.
-result &lt;- fromJSON(file = &quot;C:\\Users\\mirko\\Documents\\NTPUProg\\ProjetsR\\111-1-R\\json.json&quot;)
-
-# Print the result.
-print(result$ID[[1]])
-print(result)
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlKb3VybmV5PC0gbGlzdChcbiAgICBcIm1vcm5pbmdcIj1saXN0KFwic2hvd2VyXCIsIFxuICAgICAgICAgICAgICAgICAgIFwiZ29Ub1NjaG9vbFwiPWMoXCJNUlRcIiwgXCJCVVNcIikpLCBcbiAgICBcIm5vb25cIj1jKFwiZWF0XCIsIFwiXCIpLFxuICAgIFwiYWZ0ZXJub29uXCI9YyhcInNwb3J0c1wiKSxcbiAgICBcIm5pZ2h0XCI9YygpXG4pXG5wcmludChteUpvdXJuZXkpXG5cblxuXG5saXN0KFxuICBcbiAgXG4gIFxuICBcbilcblxuXG5gYGAifQ== -->
-<pre class="r"><code>myJourney&lt;- list(
-    &quot;morning&quot;=list(&quot;shower&quot;, 
-                   &quot;goToSchool&quot;=c(&quot;MRT&quot;, &quot;BUS&quot;)), 
-    &quot;noon&quot;=c(&quot;eat&quot;, &quot;&quot;),
-    &quot;afternoon&quot;=c(&quot;sports&quot;),
-    &quot;night&quot;=c()
-)
-print(myJourney)
-
-
-
-list(
-  
-  
-  
-  
-)
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI0VuIGF5YW50IGZhaXQgbGlicmFyeShqc29ubGl0ZSkgZGFucyBsYSBjb25zb2xlXG4jcmVzdWx0IDwtIGZyb21KU09OKFwiQzpcXFxcVXNlcnNcXFxcbWlya29cXFxcRG9jdW1lbnRzXFxcXE5UUFVQcm9nXFxcXFByb2pldHNSXFxcXDExMS0xLVJcXFxcanNvbi5qc29uXCIpXG5yZXN1bHQgPC0gZnJvbUpTT04oXCIuL2pzb24uanNvblwiKVxucmVzdWx0MiA8LSBmcm9tSlNPTihcImh0dHBzOi8vZ2lzLnRhaXdhbi5uZXQudHcvWE1MUmVsZWFzZUFMTF9wdWJsaWMvc2NlbmljX3Nwb3RfQ19mLmpzb25cIilcbiNwcmludChyZXN1bHQpXG4jcHJpbnQocmVzdWx0MilcblxuI3ByaW50IGZpcnN0IGZldyBsaW5lc1xuaGVhZChyZXN1bHQpXG5oZWFkKHJlc3VsdDIpXG5gYGAifQ== -->
-<pre class="r"><code>#En ayant fait library(jsonlite) dans la console
-#result &lt;- fromJSON(&quot;C:\\Users\\mirko\\Documents\\NTPUProg\\ProjetsR\\111-1-R\\json.json&quot;)
-result &lt;- fromJSON(&quot;./json.json&quot;)
-result2 &lt;- fromJSON(&quot;https://gis.taiwan.net.tw/XMLReleaseALL_public/scenic_spot_C_f.json&quot;)
-#print(result)
-#print(result2)
-
-#print first few lines
-head(result)
-head(result2)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXEgPSBmcm9tSlNPTihcImh0dHBzOi8vZGF0YS5lcGEuZ292LnR3L2FwaS92Mi9hcXhfcF80MzI/YXBpX2tleT1lOGRkNDJlNi05YjhiLTQzZjgtOTkxZS1iM2RlZTcyM2E1MmQmbGltaXQ9MTAwMCZzb3J0PUltcG9ydERhdGUlMjBkZXNjJmZvcm1hdD1KU09OXCIsIEYpXG5hcSRyZWNvcmRzW1sxNl1dW1s3XV1cbmBgYCJ9 -->
-<pre class="r"><code>aq = fromJSON(&quot;https://data.epa.gov.tw/api/v2/aqx_p_432?api_key=e8dd42e6-9b8b-43f8-991e-b3dee723a52d&amp;limit=1000&amp;sort=ImportDate%20desc&amp;format=JSON&quot;, F)
-aq$records[[16]][[7]]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMC40N1wiXG4ifQ== -->
-<pre><code>[1] &quot;0.47&quot;</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlUaW1ldGFibGUgPC0gbGlzdChcblwibW9uZGF5XCI9TkEsICMgbW9uZGF5IGlzIGVsZW1lbnQgdmFsdWUsIG5vdCBlbGVtZW50IG5hbWVcblwidHVlc2RheVwiPWMoXCJmaW5hbmNpYWwgZGF0YSBhbmFseXNpc1wiLCBcImVjb25vbWljIGZvcnVtXCIpLFxuXCJ3ZWRuZXNkYXlcIj1jKFwiaW50cm9kdWN0aW9uIHRvIGludGVybmF0aW9uYWwgcG9saXRpY3NcIiwgXCJwcm9ncmFtbWluZyBmb3IgZGF0YSBzY2llbmNlXCIpLFxuXCJ0aHVyc2RheVwiPWMoXCJxdWFsaXR5IG1hbmFnZW1lbnRcIiksXG5cImZyaWRheVwiPWMoXCJjaGluZXNlXCIpXG4pXG5gYGAifQ== -->
-<pre class="r"><code>myTimetable &lt;- list(
-&quot;monday&quot;=NA, # monday is element value, not element name
-&quot;tuesday&quot;=c(&quot;financial data analysis&quot;, &quot;economic forum&quot;),
-&quot;wednesday&quot;=c(&quot;introduction to international politics&quot;, &quot;programming for data science&quot;),
-&quot;thursday&quot;=c(&quot;quality management&quot;),
-&quot;friday&quot;=c(&quot;chinese&quot;)
-)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuSm9obnNGYW1pbHk9YyhcIm5hbWVcIiwgXCJhZ2VcIilcblxuXG4jSm9obnNGYW1pbHlbYyhcIm5hbWVcIiwgXCJhZ2VcIildXG4jSm9obnNGYW1pbHlbYygxLDIpXVxuI0pvaG5zRmFtaWx5Wy1jKDEsMildXG5sZW5ndGgoSm9obnNGYW1pbHkpXG5cbmFhIDwtIGMoXCJuYW1lMVwiLCBcImJcIiwgXCJjXCIpXG5uYW1lcyhhYSkgXG5hYVxuIy4uLlxuXG4jUmVwbGFjZW1lbnRzXG5Kb2huc0ZhbWlseUNvcHkxIDwtIEpvaG5zRmFtaWx5XG5wcmludChKb2huc0ZhbWlseUNvcHkxKVxuXG5cbkpvaG5zRmFtaWx5Q29weTIgPC0gbGlzdChcbiAgXCJuYW1lXCI9XCJKb2huXCIsIFwiYWdlXCI9MzVcbilcbkpvaG5zRmFtaWx5Q29weTJbYyhcIm5hbWVcIiwgXCJhZ2VcIildICNNdWx0aXBsZSByZXRyaWV2YWxcbkpvaG5zRmFtaWx5Q29weTJbYyhcImFnZVwiLCBcIm5hbWVcIildICNNdWx0aXBsZSByZXRyaWV2YWxcbkpvaG5zRmFtaWx5Q29weTJbYygxLCAyKV0gI011bHRpcGxlIHJldHJpZXZhbFxuSm9obnNGYW1pbHlDb3B5MltjKFwibmFtZVwiLCBcImFnZVwiKV0gPC0gbGlzdChcIm5hbWVcIj1cIkpvaG4gUy5cIiwgXCJhZ2VcIj0zNilcbkpvaG5zRmFtaWx5Q29weTJbW1wibmFtZVwiXV0gPC0gXCJKb2huIFMuXCJcbkpvaG5zRmFtaWx5Q29weTJbW1wiYWdlXCJdXSA8LSAzNlxuXG5gYGAifQ== -->
-<pre class="r"><code>JohnsFamily=c(&quot;name&quot;, &quot;age&quot;)
-
-
-#JohnsFamily[c(&quot;name&quot;, &quot;age&quot;)]
-#JohnsFamily[c(1,2)]
-#JohnsFamily[-c(1,2)]
-length(JohnsFamily)
-
-aa &lt;- c(&quot;name1&quot;, &quot;b&quot;, &quot;c&quot;)
-names(aa) 
-aa
-#...
-
-#Replacements
-JohnsFamilyCopy1 &lt;- JohnsFamily
-print(JohnsFamilyCopy1)
-
-
-JohnsFamilyCopy2 &lt;- list(
-  &quot;name&quot;=&quot;John&quot;, &quot;age&quot;=35
-)
-JohnsFamilyCopy2[c(&quot;name&quot;, &quot;age&quot;)] #Multiple retrieval
-JohnsFamilyCopy2[c(&quot;age&quot;, &quot;name&quot;)] #Multiple retrieval
-JohnsFamilyCopy2[c(1, 2)] #Multiple retrieval
-JohnsFamilyCopy2[c(&quot;name&quot;, &quot;age&quot;)] &lt;- list(&quot;name&quot;=&quot;John S.&quot;, &quot;age&quot;=36)
-JohnsFamilyCopy2[[&quot;name&quot;]] &lt;- &quot;John S.&quot;
-JohnsFamilyCopy2[[&quot;age&quot;]] &lt;- 36
-</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Exercice3.2</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29uY2VydHNfb2JvIDwtXG4gIGpzb25saXRlOjpmcm9tSlNPTihcImh0dHBzOi8vY2xvdWQuY3VsdHVyZS50dy9mcm9udHNpdGUvdHJhbnMvU2VhcmNoU2hvd0FjdGlvbi5kbz9tZXRob2Q9ZG9GaW5kVHlwZUomY2F0ZWdvcnk9MTdcIiwgc2ltcGxpZnlEYXRhRnJhbWUgPSBGKVxuTmV3Q29uY2VydHNfb2JvIDwtIGNvbmNlcnRzX29ib1xuYGBgIn0= -->
-<pre class="r"><code>concerts_obo &lt;-
-  jsonlite::fromJSON(&quot;https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&amp;category=17&quot;, simplifyDataFrame = F)
-NewConcerts_obo &lt;- concerts_obo</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Exercice3.3</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29uY2VydHNfb2JvIDwtXG4gIGpzb25saXRlOjpmcm9tSlNPTihcImh0dHBzOi8vY2xvdWQuY3VsdHVyZS50dy9mcm9udHNpdGUvdHJhbnMvU2VhcmNoU2hvd0FjdGlvbi5kbz9tZXRob2Q9ZG9GaW5kVHlwZUomY2F0ZWdvcnk9MTdcIiwgc2ltcGxpZnlEYXRhRnJhbWUgPSBGKVxuTmV3Q29uY2VydHNfb2JvIDwtIGNvbmNlcnRzX29ib1xuIyBUbyByZXRyaWV2ZSB0aGUgc2hvdyB0aW1lIFxuIyMgUmlnaHQgd2F5XG5OZXdDb25jZXJ0c19vYm9bWzNdXSRzaG93SW5mb1tbMV1dW1tcInRpbWVcIl1dXG4jIyBXcm9uZyB3YXlcbk5ld0NvbmNlcnRzX29ib1tbM11dJHNob3dJbmZvW1tcInRpbWVcIl1dXG4jIyBUaGVyZWZvcmUsIHRoZSByaWdodCByZXBsYWNlbWVudCBzaG91bGQgYmVcbk5ld0NvbmNlcnRzX29ib1tbM11dJHNob3dJbmZvW1sxXV1bW1widGltZVwiXV0gPC0gXCIyMDIyLzAxLzMxIDE5OjMwOjAwXCJcblxuTmV3Q29uY2VydHNfb2JvW1szXV0kc2hvd0luZm9bWzFdXVxuTmV3Q29uY2VydHNfb2JvW1szXV0kc2hvd0luZm9bWzFdXVtjKFwidGltZVwiLCBcImxvY2F0aW9uXCIpXVxuYGBgIn0= -->
-<pre class="r"><code>concerts_obo &lt;-
-  jsonlite::fromJSON(&quot;https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&amp;category=17&quot;, simplifyDataFrame = F)
-NewConcerts_obo &lt;- concerts_obo
-# To retrieve the show time 
-## Right way
-NewConcerts_obo[[3]]$showInfo[[1]][[&quot;time&quot;]]
-## Wrong way
-NewConcerts_obo[[3]]$showInfo[[&quot;time&quot;]]
-## Therefore, the right replacement should be
-NewConcerts_obo[[3]]$showInfo[[1]][[&quot;time&quot;]] &lt;- &quot;2022/01/31 19:30:00&quot;
-
-NewConcerts_obo[[3]]$showInfo[[1]]
-NewConcerts_obo[[3]]$showInfo[[1]][c(&quot;time&quot;, &quot;location&quot;)]</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Exercice3.4 Create, Bind, Add Values</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA9IGMoMSw3LDMpXG5hW1s0XV0gPC0gMTBcbmFcbmBgYCJ9 -->
-<pre class="r"><code>a = c(1,7,3)
-a[[4]] &lt;- 10
-a</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdICAxICA3ICAzIDEwXG4ifQ== -->
-<pre><code>[1]  1  7  3 10</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the
-toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and
-output will be saved alongside it (click the <em>Preview</em> button or
-press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the
-editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not
-run any R code chunks. Instead, the output of the chunk when it was last
-run in the editor is displayed.</p>
-<!-- rnb-text-end -->
-</div>
-</div>
-</div>
-
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLg0KDQpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ3RybCtTaGlmdCtFbnRlciouDQoNCiMgSDENCg0KIyMgaDINCg0KIyMjIGgzDQoNCiMjIyMgaDQuLi4NCg0KYGBge3IgYWJCb3JufQ0KI0NvbnRyb2wgKyBFbnRlciBpZiB3ZSB3YW50IHRvIHJ1biBqdXN0IG9uZSBsaW5lDQojIHBsb3QoY2FycykNCiMgcHJpbnQoIkhlbGxvIFdvcmxkIikNCiMgcHJpbnQoIkhlbGxvIFdvcmxkISIsIHF1b3RlID0gRkFMU0UpDQojIHByaW50KHBhc3RlKCJIb3ciLCJhcmUiLCJ5b3U/IikpDQojIA0KIyBkaWUgPC0gMTo2DQojIHByaW50KGRpZSkNCiMgcHJpbnQoZGllICogYygxLDIpKQ0KIyByZXN1bHQgPC0gc2FtcGxlKGRpZSwgc2l6ZSA9IDIsIHJlcGxhY2UgPSBUUlVFKQ0KIyBwcmludChyZXN1bHQpDQojIHN1bShyZXN1bHQpDQoNCmE9Mg0KYj0zDQojV2UgY2FuIHR5cGUgVmlldyhhKSBpbiBjb25zb2xlIHRvIHNlZSBpbiBkZXRhaWwgb3VyIHZhcmlhYmxlDQpgYGANCg0KYGBge3J9DQojVGhlIHNlY29uZCBzeW1ib2wgaXMgcnVuIGV2ZXJ5dGhpbmcgdG8gdGhpcywgYnV0IG5vdCB0aGlzIG9uZQ0KYStiDQpgYGANCg0KIyMjVGVzdHMNCmBgYHtyfQ0KbGlzdCgiSm9obiIsIDE3OCwgVFJVRSlbWzFdXQ0KbGlzdCgiSm9obiIsIDE3OCwgVFJVRSlbWzJdXQ0KbGlzdCgiSm9obiIsIDE3OCwgVFJVRSlbWzNdXQ0KDQpiaWdMaXN0IDwtIGxpc3QoIkpvaG4iLDQyLCBsaXN0KCJNYXJ5IiwgMzUpKQ0KcHJpbnQoIlRoaXMgaXMgYmlnTGlzdCIpDQpwcmludChwYXN0ZShiaWdMaXN0W1sxXV0sIGJpZ0xpc3RbWzJdXSwgYmlnTGlzdFtbM11dKSkgI1ByaW50IGxlcyBkZXV4IGFsdGVybmF0aXZlcw0KYmlnTGlzdFtbM11dW1syXV0gI3ByaW50IHF1ZSAzNQ0KYGBgDQoNCiMjI0F0b21pYyBWZWN0b3JzDQpgYGB7cn0NCnBlcnNvbk5hbWUgPSBjKCJKb2huIiwgIk1hcnkiKQ0KaW50ZXJlc3RpbmdOdW1iZXJzID0gYygyLCAzLjE0MTIpDQpjb3ZpZFBvc2l0aXZlID0gYyhUUlVFLCBUUlVFLCBGKQ0KDQpwZXJzb25OYW1lIDwtIGMoIkpvaG4iLCAiTWFyeSIpDQppbnRlcmVzdGluZ051bWJlcnMgPC0gYygyLCAzLjE0MTIsIE5hTikNCmNvdmlkUG9zaXRpdmUgPC0gYyhUUlVFLCBUUlVFLCBGLCBOQSkNCg0KYygiSm9obiIsICJNYXJ5IikgLT4gcGVyc29uTmFtZQ0KYygyLCAzLjE0MTIpIC0+IGludGVyZXN0aW5nTnVtYmVycw0KYyhUUlVFLCBUUlVFLCBGKSAtPiBjb3ZpZFBvc2l0aXZlDQpgYGANCg0KDQojIyNpbmRleGVzDQpgYGB7cn0NCmxpc3QoIlRleHQiLCAxLCBGQUxTRSwgMi4zNDMpIC0+IGxpc3QxDQpwcmludChsaXN0MVtbMV1dKQ0KcHJpbnQocGFzdGUoIkZpcnN0IHZhbHVlIDoiLCBsaXN0MVtbMV1dLCJTZWNvbmQgdmFsdWUgOiIsIGxpc3QxW1szXV0pKQ0KDQoNCmBgYA0KDQoNCiMjIyBsb29wcw0KYGBge3J9DQpsaXN0MSA9IGxpc3QoIlRleHQiLCAxLCBGQUxTRSwgMi4zNDMpDQpmb3IgKGUgaW4gbGlzdDEpew0KICBwcmludChlKQ0KICBpZihlID09IEZBTFNFKXsNCiAgICBwcmludCgiaXQncyBGYWxzZSwgc28gYnJlYWsiKQ0KICAgIGJyZWFrDQogIH0NCn0NCmBgYA0KDQpgYGB7cn0NCiNDb2xsZWN0aW5nIHR5cGUgOiAybmQgbWV0aG9kIChtw6l0aG9kZSBub3JtYWxlIHBhciBvYmpldCkNCiNDb2xsZWN0IHZlcnRpY2FsbHkNCiNBdG9taWMgdmVjdG9yIC0tPiBjb2xsZWN0IGRhdGEgZnJvbSB0aGUgc2FtZSB0eXBlIHRvZ2V0aGVyDQpjKDExMSwgMTExLCAxMTEsIDEpDQpjKCJzYWx1dCIsICJzYWx1dDIiLCAic2FsdXQzIikNCg0KbGlzdCgiYSIsICJiIikNCmxpc3QoImMiLCAiZCIpDQpsaXN0KGxpc3QoImEiLCAiYiIpLCBsaXN0KCJjIiwgImQiKSkNCmBgYA0KDQpgYGB7cn0NCiNOYW1lIHRoZSB2YWx1ZXMsIE5PVCBCSU5ESU5HISEhDQpwZXJzb24xIDwtIGxpc3QoYWdlPTI1LCBuYW1lPSJKZWFuIiwgcmV2ZW51ZT0xMjEzNCwgInJlc2lkZW5jZSBsb2NhdGlvbiI9MTIzMTIpDQpwYXN0ZTANCg0KDQpsaXN0KA0KICAiMXN0Ij1saXN0KCksIA0KICAiMm5kIj1saXN0KCksLi4uDQopDQpgYGANCg0KYGBge3J9DQoucGFzc3dvcmQgPSAiYXNqZGhzYWlvaHNhIg0KYGBgDQoNCmBgYHtyfQ0KYygiam9obiIsICJtYXJ5IikgLT4gbGlzdA0KZm9yIChlIGluIGxpc3Qpew0KICBwcmludChlKQ0KfQ0KDQoNCiNBdG9taWMgVmVjdG9yDQpjKDIuMywgNCwgNS4zKQ0KYygiQTEiPVRSVUUsIkEyIj1GQUxTRSwiQTMiPVRSVUUpIC0+IHZlY3RvcjENCnByaW50KHZlY3RvcjEpDQoNCiNOb24gQXRvbWljIFZlY3Rvcg0KbGlzdCgibmFtZSI9IkpvaG4iLCJoZWlnaHQiPTE3NywiYWdlIj0zOCwgIm1hcnJpZWQiPVRSVUUpIC0+am9obkluZm8NCnByaW50KGpvaG5JbmZvKQ0KDQoNCiNSZXRyaWV2ZSBlbGVtZW50cyBmcm9tIHRoZSB2ZWN0b3JzDQojU2Vjb25kIHZhbHVlIG9mIHZlY3RvcjEgJiBqb2huIEluZm8NCnByaW50KHZlY3RvcjFbWzJdXSkNCnByaW50KGpvaG5JbmZvW1syXV0pDQojSXMgam9obiBtYXJyaWVkDQpwcmludChqb2huSW5mb1tbIm1hcnJpZWQiXV0pDQoNCg0KI0xpc3RlcyBpbWJyaXF1ZcOpcyANCnNhbXBsZV9kYXRhIDwtIGxpc3QoDQogICJvYnNlcnZhdGlvbjEiPWxpc3QoIm1hcnJpZWQiPVRSVUUsIm5hbWUiPSJKb2huIiksIA0KICAib2JzZXJ2YXRpb24yIj1saXN0KCJtYXJyaWVkIj1GQUxTRSwibmFtZSI9Ik1hcnkiKSwgDQogICJvYnNlcnZhdGlvbjMiPWxpc3QoIm1hcnJpZWQiPVRSVUUsIm5hbWUiPSJTdGV2ZW4iKQ0KKQ0KcHJpbnQoc2FtcGxlX2RhdGEpDQoNCiNnZXQgbmFtZSBvZiBzdGV2ZW4NCnByaW50KHNhbXBsZV9kYXRhW1szXV1bWzJdXSkNCnByaW50KHNhbXBsZV9kYXRhW1sib2JzZXJ2YXRpb24zIl1dW1sibmFtZSJdXSkNCnByaW50KHNhbXBsZV9kYXRhJG9ic2VydmF0aW9uMyRuYW1lKQ0KYGBgDQoNCg0KYGBge3J9DQpkYXRhLmVudHJ5KCJzYWx1dCIpIC0+IHZhcg0KcHJpbnQodmFyKQ0KYGBgDQpSZWFkIENTVg0KYGBge3J9DQojbXlkYXRhPXJlYWQudGFibGUoZmlsZT1maWxlLmNob29zZSgpLCsgc2VwID0iLCIsKyBoZWFkZXI9VFJVRSkgDQoNCm15ZGF0YSA8LSByZWFkLnRhYmxlKCJDOlxcVXNlcnNcXG1pcmtvXFxEb2N1bWVudHNcXE5UUFVQcm9nXFxQcm9qZXRzUlxcMTExLTEtUlxcY2l0aWVzLmNzdiIsDQogICAgaGVhZGVyPVRSVUUsIHNlcD0iLCIgDQopIA0KcHJpbnQobXlkYXRhKQ0KDQpteWRhdGEyIDwtIHJlYWQuY3N2KCJDOlxcVXNlcnNcXG1pcmtvXFxEb2N1bWVudHNcXE5UUFVQcm9nXFxQcm9qZXRzUlxcMTExLTEtUlxcY2l0aWVzLmNzdiIsDQogICAgaGVhZGVyPVRSVUUsIHNlcD0iLCIgDQopIA0KcHJpbnQobXlkYXRhMikNCmZvciAoYyBpbiBteWRhdGEyKXsNCiAgcHJpbnQoYykNCn0NCg0KYGBgDQoNCmBgYHtyfQ0KIyBMb2FkIHRoZSBwYWNrYWdlIHJlcXVpcmVkIHRvIHJlYWQgSlNPTiBmaWxlcy4NCmxpYnJhcnkoInJqc29uIikNCg0KIyBHaXZlIHRoZSBpbnB1dCBmaWxlIG5hbWUgdG8gdGhlIGZ1bmN0aW9uLg0KcmVzdWx0IDwtIGZyb21KU09OKGZpbGUgPSAiQzpcXFVzZXJzXFxtaXJrb1xcRG9jdW1lbnRzXFxOVFBVUHJvZ1xcUHJvamV0c1JcXDExMS0xLVJcXGpzb24uanNvbiIpDQoNCiMgUHJpbnQgdGhlIHJlc3VsdC4NCnByaW50KHJlc3VsdCRJRFtbMV1dKQ0KcHJpbnQocmVzdWx0KQ0KDQoNCg0KYGBgDQpgYGB7cn0NCm15Sm91cm5leTwtIGxpc3QoDQogICAgIm1vcm5pbmciPWxpc3QoInNob3dlciIsIA0KICAgICAgICAgICAgICAgICAgICJnb1RvU2Nob29sIj1jKCJNUlQiLCAiQlVTIikpLCANCiAgICAibm9vbiI9YygiZWF0IiwgIiIpLA0KICAgICJhZnRlcm5vb24iPWMoInNwb3J0cyIpLA0KICAgICJuaWdodCI9YygpDQopDQpwcmludChteUpvdXJuZXkpDQoNCg0KDQpsaXN0KA0KICANCiAgDQogIA0KICANCikNCg0KDQpgYGANCg0KDQpgYGB7cn0NCiNFbiBheWFudCBmYWl0IGxpYnJhcnkoanNvbmxpdGUpIGRhbnMgbGEgY29uc29sZQ0KI3Jlc3VsdCA8LSBmcm9tSlNPTigiQzpcXFVzZXJzXFxtaXJrb1xcRG9jdW1lbnRzXFxOVFBVUHJvZ1xcUHJvamV0c1JcXDExMS0xLVJcXGpzb24uanNvbiIpDQpyZXN1bHQgPC0gZnJvbUpTT04oIi4vanNvbi5qc29uIikNCnJlc3VsdDIgPC0gZnJvbUpTT04oImh0dHBzOi8vZ2lzLnRhaXdhbi5uZXQudHcvWE1MUmVsZWFzZUFMTF9wdWJsaWMvc2NlbmljX3Nwb3RfQ19mLmpzb24iKQ0KI3ByaW50KHJlc3VsdCkNCiNwcmludChyZXN1bHQyKQ0KDQojcHJpbnQgZmlyc3QgZmV3IGxpbmVzDQpoZWFkKHJlc3VsdCkNCmhlYWQocmVzdWx0MikNCmBgYA0KDQpgYGB7cn0NCmFxID0gZnJvbUpTT04oImh0dHBzOi8vZGF0YS5lcGEuZ292LnR3L2FwaS92Mi9hcXhfcF80MzI/YXBpX2tleT1lOGRkNDJlNi05YjhiLTQzZjgtOTkxZS1iM2RlZTcyM2E1MmQmbGltaXQ9MTAwMCZzb3J0PUltcG9ydERhdGUlMjBkZXNjJmZvcm1hdD1KU09OIiwgRikNCmFxJHJlY29yZHNbWzE2XV0kY28NCmBgYA0KYGBge3J9DQpteVRpbWV0YWJsZSA8LSBsaXN0KA0KIm1vbmRheSI9YyhOQSksICNOb3QgQXZhaWxhYmxlDQoidHVlc2RheSI9YygiZmluYW5jaWFsIGRhdGEgYW5hbHlzaXMiLCAiZWNvbm9taWMgZm9ydW0iKSwNCiJ3ZWRuZXNkYXkiPWMoImludHJvZHVjdGlvbiB0byBpbnRlcm5hdGlvbmFsIHBvbGl0aWNzIiwgInByb2dyYW1taW5nIGZvciBkYXRhIHNjaWVuY2UiKSwNCiJ0aHVyc2RheSI9YygicXVhbGl0eSBtYW5hZ2VtZW50IiksDQoiZnJpZGF5Ij1jKCJjaGluZXNlIikNCikNCm15VGltZXRhYmxlIDwtIGxpc3QoDQoibW9uZGF5Ij1jKCksICMgRW1wdHkgYXRvbWljIHZlY3Rvcg0KInR1ZXNkYXkiPWMoImZpbmFuY2lhbCBkYXRhIGFuYWx5c2lzIiwgImVjb25vbWljIGZvcnVtIiksDQoid2VkbmVzZGF5Ij1jKCJpbnRyb2R1Y3Rpb24gdG8gaW50ZXJuYXRpb25hbCBwb2xpdGljcyIsICJwcm9ncmFtbWluZyBmb3IgZGF0YSBzY2llbmNlIiksDQoidGh1cnNkYXkiPWMoInF1YWxpdHkgbWFuYWdlbWVudCIpLA0KImZyaWRheSI9YygiY2hpbmVzZSIpDQopDQpteVRpbWV0YWJsZSA8LSBsaXN0KA0KIm1vbmRheSI9TlVMTCwgI1B1cmUgdm9pZA0KInR1ZXNkYXkiPWMoImZpbmFuY2lhbCBkYXRhIGFuYWx5c2lzIiwgImVjb25vbWljIGZvcnVtIiksDQoid2VkbmVzZGF5Ij1jKCJpbnRyb2R1Y3Rpb24gdG8gaW50ZXJuYXRpb25hbCBwb2xpdGljcyIsICJwcm9ncmFtbWluZyBmb3IgZGF0YSBzY2llbmNlIiksDQoidGh1cnNkYXkiPWMoInF1YWxpdHkgbWFuYWdlbWVudCIpLA0KImZyaWRheSI9YygiY2hpbmVzZSIpDQopDQpgYGANCg0KYGBge3J9DQpKb2huc0ZhbWlseT1jKCJuYW1lIiwgImFnZSIpDQoNCg0KI0pvaG5zRmFtaWx5W2MoIm5hbWUiLCAiYWdlIildDQojSm9obnNGYW1pbHlbYygxLDIpXQ0KI0pvaG5zRmFtaWx5Wy1jKDEsMildDQpsZW5ndGgoSm9obnNGYW1pbHkpDQoNCmFhIDwtIGMoIm5hbWUxIiwgImIiLCAiYyIpDQpuYW1lcyhhYSkgDQphYQ0KIy4uLg0KDQojUmVwbGFjZW1lbnRzDQpKb2huc0ZhbWlseUNvcHkxIDwtIEpvaG5zRmFtaWx5DQpwcmludChKb2huc0ZhbWlseUNvcHkxKQ0KDQoNCkpvaG5zRmFtaWx5Q29weTIgPC0gbGlzdCgNCiAgIm5hbWUiPSJKb2huIiwgImFnZSI9MzUNCikNCkpvaG5zRmFtaWx5Q29weTJbYygibmFtZSIsICJhZ2UiKV0gI011bHRpcGxlIHJldHJpZXZhbA0KSm9obnNGYW1pbHlDb3B5MltjKCJhZ2UiLCAibmFtZSIpXSAjTXVsdGlwbGUgcmV0cmlldmFsDQpKb2huc0ZhbWlseUNvcHkyW2MoMSwgMildICNNdWx0aXBsZSByZXRyaWV2YWwNCkpvaG5zRmFtaWx5Q29weTJbYygibmFtZSIsICJhZ2UiKV0gPC0gbGlzdCgibmFtZSI9IkpvaG4gUy4iLCAiYWdlIj0zNikNCkpvaG5zRmFtaWx5Q29weTJbWyJuYW1lIl1dIDwtICJKb2huIFMuIg0KSm9obnNGYW1pbHlDb3B5MltbImFnZSJdXSA8LSAzNg0KDQpgYGANCg0KDQpFeGVyY2ljZTMuMg0KYGBge3J9DQpjb25jZXJ0c19vYm8gPC0NCiAganNvbmxpdGU6OmZyb21KU09OKCJodHRwczovL2Nsb3VkLmN1bHR1cmUudHcvZnJvbnRzaXRlL3RyYW5zL1NlYXJjaFNob3dBY3Rpb24uZG8/bWV0aG9kPWRvRmluZFR5cGVKJmNhdGVnb3J5PTE3Iiwgc2ltcGxpZnlEYXRhRnJhbWUgPSBGKQ0KTmV3Q29uY2VydHNfb2JvIDwtIGNvbmNlcnRzX29ibw0KYGBgDQoNCg0KRXhlcmNpY2UzLjMNCmBgYHtyfQ0KY29uY2VydHNfb2JvIDwtDQogIGpzb25saXRlOjpmcm9tSlNPTigiaHR0cHM6Ly9jbG91ZC5jdWx0dXJlLnR3L2Zyb250c2l0ZS90cmFucy9TZWFyY2hTaG93QWN0aW9uLmRvP21ldGhvZD1kb0ZpbmRUeXBlSiZjYXRlZ29yeT0xNyIsIHNpbXBsaWZ5RGF0YUZyYW1lID0gRikNCk5ld0NvbmNlcnRzX29ibyA8LSBjb25jZXJ0c19vYm8NCiMgVG8gcmV0cmlldmUgdGhlIHNob3cgdGltZSANCiMjIFJpZ2h0IHdheQ0KTmV3Q29uY2VydHNfb2JvW1szXV0kc2hvd0luZm9bWzFdXVtbInRpbWUiXV0NCiMjIFdyb25nIHdheQ0KTmV3Q29uY2VydHNfb2JvW1szXV0kc2hvd0luZm9bWyJ0aW1lIl1dDQojIyBUaGVyZWZvcmUsIHRoZSByaWdodCByZXBsYWNlbWVudCBzaG91bGQgYmUNCk5ld0NvbmNlcnRzX29ib1tbM11dJHNob3dJbmZvW1sxXV1bWyJ0aW1lIl1dIDwtICIyMDIyLzAxLzMxIDE5OjMwOjAwIg0KDQpOZXdDb25jZXJ0c19vYm9bWzNdXSRzaG93SW5mb1tbMV1dDQpOZXdDb25jZXJ0c19vYm9bWzNdXSRzaG93SW5mb1tbMV1dW2MoInRpbWUiLCAibG9jYXRpb24iKV0NCmBgYA0KDQpFeGVyY2ljZTMuNCBDcmVhdGUsIEJpbmQsIEFkZCBWYWx1ZXMNCmBgYHtyfQ0KYSA9IGMoMSw3LDMpDQojYWRkIGEgdmFsdWUNCmFbWzRdXSA8LSAxMCANCmENCmxlbmd0aChhKQ0KI2FkZCAyIHZhbHVlcyANCmFbWzVdXSA8LSAyIA0KYVtbNl1dIDwtIDUgDQoNCiNWZXJzaW9uIDINCmIgPSBjKDEsNywzKQ0KDQpgYGANCg0KDQoNCg0KDQoNCg0KDQpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ3RybCtBbHQrSSouDQoNCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ3RybCtTaGlmdCtLKiB0byBwcmV2aWV3IHRoZSBIVE1MIGZpbGUpLg0KDQpUaGUgcHJldmlldyBzaG93cyB5b3UgYSByZW5kZXJlZCBIVE1MIGNvcHkgb2YgdGhlIGNvbnRlbnRzIG9mIHRoZSBlZGl0b3IuIENvbnNlcXVlbnRseSwgdW5saWtlICpLbml0KiwgKlByZXZpZXcqIGRvZXMgbm90IHJ1biBhbnkgUiBjb2RlIGNodW5rcy4gSW5zdGVhZCwgdGhlIG91dHB1dCBvZiB0aGUgY2h1bmsgd2hlbiBpdCB3YXMgbGFzdCBydW4gaW4gdGhlIGVkaXRvciBpcyBkaXNwbGF5ZWQuDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpJbnPDqXJlciB1bmUgY29kZSBjaHVuayAqQ3RybCtBbHQrSSoNCg0KYGBge3J9DQojRGlmZsOpcmVuY2UgZW50cmUgcGxvdCBldCBwcmludA0KcGxvdChjYXJzKQ0KcHJpbnQoY2FycykNCmBgYA0KDQoNCkNoYXB0ZXIgMiANCjIuNCBEYXRhIChBdG9taWMpDQpgYGB7cn0NCiJTdHJpbmciICMiTWFyeSIsICJFSkhGw6QxMzQxIg0KTnVtZXJpYyAjMkwgKEludGVnZXIpLCAyKEludGVnZXIpLCAyLjQoRG91YmxlKSwgDQpMb2dpY2FsICNUUlVFLCBGQUxTRQ0KYGBgDQoNCjIuNSBDb2xsZWN0aW9ucw0KYGBge3J9DQojQXRvbWljIFZlY3RvciBjb250YWlucyBvbmx5IHRoZSBzYW1lIHR5cGUgb2YgdmFsdWUNCmMoIkpvaG4iLCAiTWFyeSIpDQpjKDIsIDMuMTQxMikNCmMoVFJVRSwgVFJVRSwgRikNCnR5cGVvZihjKFRSVUUsIFRSVUUsIEYpKSAjRGV0ZXJtaW7DqSBwYXIgbGUgdHlwZSBkZXMgZG9ubsOpZXMobG9naWNhbCkNCg0KI0xpc3QgKGdlbmVyYWwgdmVjdG9yKSBjb250YWlucyBkaWZmZXJlbnQgdHlwZXMgb2YgdmFsdWVzDQpsaXN0KCJKb2huIiwgMTc4LCBUUlVFKQ0KdHlwZW9mKGxpc3QoIkpvaG4iLCAxNzgsIFRSVUUpKQ0KYGBgDQoNCjIuNiBWYWx1ZXMgYW5kIGVsZW1lbnQgVmFsdWVzDQpgYGB7cn0NCiNBIHNpbmdsZSBiYXNpYyB0eXBlIHZhbHVlLCBhIHZlY3RvciBvciBhIGxpc3QgY2FuIHJlcHJlc2VudCBhIHZhbHVlIQ0KIkpvaG4iDQoxMg0KYygyLCAzLjE0MTIpDQpsaXN0KCJKb2huIiwgMTc4LCBUUlVFKQ0KDQojRWxlbWVudCB2YWx1ZSBpcyBhbiBlbGVtZW50IGluc2lkZSBvZiBhIHZlY3RvciBvciBhIGxpc3QgDQpsaXN0KCJKb2huIiwgNSwgVFJVRSkgIyBoYXMgMyBlbGVtZW50IHZhbHVlcy4NCmxpc3QoIkpvaG4iLDQyLCBsaXN0KCJNYXJ5IiwgMzUpKSAjIGhhcyBhbHNvIDMgZWxlbWVudCB2YWx1ZXMuISAiTWFyeSIgaXMgbm90IGEgZWxlbWVudCB2YWx1ZSBvZiB0aGUgYmlnIGxpc3QsIHNpbmNlIGl0IGlzIGluIGEgc21hbGxlciBpbnNpZGUgYW5vdGhlciB2ZWN0b3IgDQpgYGANCg0KMi43IFJldHJpZXZlIE9ORSBlbGVtZW50IHZhbHVlIGJ5IHBvc2l0aW9uDQpgYGB7cn0NCiNEb3VibGUgYnJhY2tldHMgW1tdXQ0KYygiSm9obiIsICJNYXJ5IilbWzFdXQ0KYygiSm9obiIsICJNYXJ5IilbWzJdXQ0KDQojUmV0cmlldmUgMzUNCmJpZ0xpc3QgPC0gbGlzdCgiSm9obiIsNDIsIGxpc3QoIk1hcnkiLCAzNSkpDQpiaWdMaXN0W1szXV1bWzJdXQ0KDQojISEyIHZlY3RvcnMgbWFrZSAxDQp2ZWN0b3IgPC0gYyhjKCJtYXJ5IiwgIkpvaG4iKSwgYygxLDIpKQ0KdmVjdG9yW1szXV1bWzFdXSAjISEhIFBhcmVpbCBwb3VyIHVuIHZlY3RldXIgcXVpIGNvbnRpZW50IGRlcyBsaXN0ZXMhDQoNCnZlY3RvcjIgPC0gbGlzdChjKCJtYXJ5IiwgIkpvaG4iKSwgYygxLDIpKQ0KdmVjdG9yMltbMl1dW1sxXV0gI1JldHJpZXZlIDENCmBgYA0KDQoyLjggQmluZGluZyAoYXNzaWduIGEgbmFtZSB3aXRoIGEgdmFsdWUpDQpgYGB7cn0NCiNEaWZmZXJlbmNlIGJldHdlZW4gQmluZGluZyBhbmQgTmFtZSBjYWxsDQpwZXJzb25OYW1lMSA9IGMoIkpvaG4iLCAiTWFyeSIpDQpwZXJzb25OYW1lMiA8LSBjKCJKb2huIiwgIk1hcnkiKQ0KYygiSm9obiIsICJNYXJ5IikgLT4gcGVyc29uTmFtZTMNCg0KcGVyc29uTmFtZTQgPSBsaXN0KCJKb2huIiwgIk1hcnkiKQ0KcGVyc29uTmFtZTUgPC0gbGlzdCgiSm9obiIsICJNYXJ5IikNCmxpc3QoIkpvaG4iLCAiTWFyeSIpIC0+IHBlcnNvbk5hbWU2DQoNCnBlcnNvbk5hbWUxW1syXV0NCnBlcnNvbk5hbWU0W1syXV0NCg0KI05hbWUgY2FsbHMNCmVsZW1lbnQxIDwtICJhIg0KZWxlbWVudDIgPC0gImIiDQpjKGVsZW1lbnQxLCBlbGVtZW50MikgIyB0aGVyZSBhcmUgdHdvIG5hbWUgY2FsbHMNCmBgYA0KDQpTb21lIHZhbGlkIG5hbWVzIGZvciBCaW5kaW5nDQpgYGB7cn0NCm15XzEwOF90b3RhbF9jcmVkaXRzIDwtIDE1DQpteS4xMDgudG90YWxfY3JlZGl0cyA8LSAxNQ0KLm15LjEwOC50b3RhbF9jcmVkaXRzIDwtIDE1ICNzdGFydCB3aXRoIC4gd2lsbCBoaWRlIG5hbWUNCmAuMTA4LnRvdGFsX2NyZWRpdHNgIDwtIDE1ICNpcnJlZ3VsYXIgbmFtZSwgYCBpcyBub3QgcGFydCBvZiB0aGUgbmFtZQ0KYDEwOCB0b3RhbCBjcmVkaXRzYCA8LSAxNQ0KYGBgDQoNCjIuOSBDb25jYXRlbmF0ZQ0KYGBge3J9DQojQ29uY2F0ZW5hdGUgYXRvbWljIHZlY3RvcnMNCnR5cGVvZihjKCJhIiwgImIiKSkNCnR5cGVvZihjKCJjIiwgImQiKSkNCmMoYygiYSIsICJiIiksIGMoImMiLCAiZCIpKSANCg0KI0NvbmNhdGVuYXRlIGRlcyBsaXN0ZXMgw6AgbCdhaWRlIGQndW4gdmVjdGV1cg0KbGlzdGUgPSBjKGxpc3QoImEiLCAxKSwgbGlzdCgiYyIsIDIpKQ0KbGlzdGVbWzRdXQ0KbGlzdGUNCg0KI0NvbmNhdGVuYXRlIGxlIHBhc3RlDQpwYXN0ZTAoInNhbHV0IiwgImplYW4iKQ0KcGFzdGUoInNhbHV0IiwgImplYW4iKQ0KYGBgDQoNCjIuMTAgTGlzdA0KYGBge3J9DQpsaXN0KGMoImEiLCAiYiIpLCBjKCJjIiwgImQiKSkgIyAoMSkNCiMgc28gKDEpIGlzIG5vdCB0aGUgc2FtZSBhcw0KbGlzdCgiYSIsICJiIiwgImMiLCAiZCIpDQoNCiNUaGVzZSB0d28gYXJlIG5vdCB0aGUgc2FtZSB0b28NCmMoYygiYSIsICJiIiksIGMoImMiLCAiZCIpKVtbMV1dDQpsaXN0KGMoImEiLCAiYiIpLCBjKCJjIiwgImQiKSlbWzFdXSAjIEVycm9yDQoNCiNDb2VyY2lvbg0KY29lcmNpb24gPC0gYyhjKCJhIiwgImIiKSwgYygxLCAyMikpDQp0eXBlb2YoY29lcmNpb25bWzNdXSkNCiNjb2VyY2lvbltbM11dICsgMiAjRXJyb3IgDQoNCiNXaXRoIG90aGVycyB0aGFuIGNoYXJhY3Rlcg0KY29lcmNpb24yIDwtIGMoYygxLDIpLCBjKFRSVUUsIEZBTFNFKSkNCmNvZXJjaW9uMg0KY29lcmNpb24zIDwtIGMoYyhUUlVFLCBGQUxTRSksIGMoMSwyKSkNCmNvZXJjaW9uMw0KYGBgDQoNCjIuMTEgU2FtcGxlZCBkYXRhIChPYnNlcnZhdGlvbiBieSBvYnNlcnZhdGlvbikNCmBgYHtyfQ0KI2FnZSwgZ2VuZGVyLCByZXNpZGVudGlhbCBkaXN0cmljdCwgZXRjDQpsaXN0KDU0LCAibWFsZSIsICJub3J0aCIsIDEwMCkgIyAoMSkNCmxpc3QoMzIsICJmZW1hbGUiLCAic291dGgiLCAyNSkgIyAoMikNCmxpc3QoMjgsICJmZW1hbGUiLCAiZWFzdCIsIE5BKSAjICgzKSBOQSAtPiBJZiB2YWx1ZSBub3QgYXNzaWduZWQgDQpsaXN0KDIwLCAibWFsZSIsICJlYXN0IiwgNzcpICMgKDQpDQoNCiNQdXQgYWxsIHRvZ2V0aGVyDQpvQnlPMSA8LSBsaXN0KA0KICBsaXN0KDU0LCAibWFsZSIsICJub3J0aCIsIDEwMCksICMgKDEpDQogIGxpc3QoMzIsICJmZW1hbGUiLCAic291dGgiLCAyNSksICMgKDIpDQogIGxpc3QoMjgsICJmZW1hbGUiLCAiZWFzdCIsIE5BKSwgIyAoMykNCiAgbGlzdCgyMCwgIm1hbGUiLCAiZWFzdCIsIDc3KSAjICg0KQ0KKQ0KDQojV2h5IG5vdCBpbiBhbiBhdG9taWMgdmVjdG9yPyANCm9CeU8yIDwtIGMoDQogIGxpc3QoNTQsICJtYWxlIiwgIm5vcnRoIiwgMTAwKSwgIyAoMSkNCiAgbGlzdCgzMiwgImZlbWFsZSIsICJzb3V0aCIsIDI1KSwgIyAoMikNCiAgbGlzdCgyOCwgImZlbWFsZSIsICJlYXN0IiwgTkEpLCAjICgzKQ0KICBsaXN0KDIwLCAibWFsZSIsICJlYXN0IiwgNzcpICMgKDQpDQopDQpwZXJzb25zMiAjTWV0IHRvdXQgc3VyIHVuIG3Dqm1lIGV0IHNldWwgbml2ZWF1IChjb21tZSB1bmUgYmlnIGxpc3RlIHF1aSBjb250aWVudCB0b3V0ZXMgbGVzIHZhbGV1cnMgw6AgbGEgc3VpdGUpDQpgYGANCg0KMi4xMSAoRmVhdHVyZSBieSBmZWF0dXJlKQ0KYGBge3J9DQojUHV0IGFsbCB0b2dldGhlcg0KZkJ5RiA8LSBsaXN0KA0KICBjKDU0LCAzMiwgMjgsIDIwKSwgIyBhZ2UNCiAgYygibWFsZSIsICJmZW1hbGUiLCAiZmVtYWxlIiwgIm1hbGUiKSwgIyBnZW5kZXINCiAgYygibm9ydGgiLCAic291dGgiLCAiZWFzdCIsICJlYXN0IiksICMgcmVzaWRlbmNlDQogIGMoMTAwLCAyNSwgTkEsIDc3KSAjIGluY29tZSAgDQopDQoNCiNXaHkgbm90IGluIGFuIGF0b21pYyB2ZWN0b3I/IA0KZkJ5RjIgPC0gYygNCiAgYyg1NCwgMzIsIDI4LCAyMCksICMgYWdlDQogIGMoIm1hbGUiLCAiZmVtYWxlIiwgImZlbWFsZSIsICJtYWxlIiksICMgZ2VuZGVyDQogIGMoIm5vcnRoIiwgInNvdXRoIiwgImVhc3QiLCAiZWFzdCIpLCAjIHJlc2lkZW5jZQ0KICBjKDEwMCwgMjUsIE5BLCA3NykgIyBpbmNvbWUgIA0KKQ0KZkJ5RjIgI01ldCB0b3V0IHN1ciB1biBtw6ptZSBldCBzZXVsIG5pdmVhdSAoY29tbWUgdW5lIGJpZyBsaXN0ZSBxdWkgY29udGllbnQgdG91dGVzIGxlcyB2YWxldXJzIMOgIGxhIHN1aXRlKQ0KYGBgDQoNCjIuMTIgTmFtZWQgZWxlbWVudCB2YWx1ZXMNCmBgYHtyfQ0KIyBhdG9taWMgdmVjdG9yDQpjKCJKb2huIj0xNzcsICJNYXJ5Ij0xNjAsICJCaWxsIj0xNzApDQojIGxpc3QNCmxpc3QoIkpvaG4iPTE3NywgIk1hcnkiPTE2MCwgIkJpbGwiPTE3MCkNCg0KI1dpdGggaXJyZWd1bGFyIG5hbWUNCmxpc3QoDQogICIxc3QgT2JzZXJ2YXRpb24iPWxpc3QoNTQsICJtYWxlIiwgIm5vcnRoIiwgMTAwKSwgDQogICIybmQgT2JzZXJ2YXRpb24iPWxpc3QoMzIsICJmZW1hbGUiLCAic291dGgiLCAyNSksIA0KICAiM3JkIE9ic2VydmF0aW9uIj1saXN0KDI4LCAiZmVtYWxlIiwgImVhc3QiLCBOQSksIA0KICAiNHRoIE9ic2VydmF0aW9uIj1saXN0KDIwLCAibWFsZSIsICJlYXN0IiwgNzcpIA0KKQ0KDQojV2l0aCByZWd1bGFyIG5hbWUNCnBlcnNvbkluZm8gPSBsaXN0KA0KICBmaXJzdE9ic2VydmF0aW9uPWxpc3QoNTQsICJtYWxlIiwgIm5vcnRoIiwgMTAwKSwgDQogIHNlY29uZE9ic2VydmF0aW9uPWxpc3QoMzIsICJmZW1hbGUiLCAic291dGgiLCAyNSkNCiAgKQ0KDQojUmV0cmlldmUgdmFsdWVzIA0KcGVyc29uSW5mb1tbMl1dDQpwZXJzb25JbmZvW1siZmlyc3RPYnNlcnZhdGlvbiJdXQ0KcGVyc29uSW5mb1tbInNlY29uZE9ic2VydmF0aW9uIl1dW1sxXV0NCmBgYA0KDQoyLjEzIFJldHJpZXZlIGVsZW1lbnQgdmFsdWUgYnkgZWxlbWVudCBuYW1lDQpgYGB7cn0NCnNhbXBsZV9kYXRhIDwtIA0KICBsaXN0KA0KICAgICIxc3QgT2JzZXJ2YXRpb24iPWxpc3QoNTQsICJtYWxlIiwgIm5vcnRoIiwgMTAwKSwgDQogICAgIjJuZCBPYnNlcnZhdGlvbiI9bGlzdCgzMiwgImZlbWFsZSIsICJzb3V0aCIsIDI1KSwgDQogICAgIjNyZCBPYnNlcnZhdGlvbiI9bGlzdCgyOCwgImZlbWFsZSIsICJlYXN0IiwgTkEpLCANCiAgICAiNHRoIE9ic2VydmF0aW9uIj1saXN0KDIwLCAibWFsZSIsICJlYXN0IiwgNzcpDQogICkNCnNhbXBsZV9kYXRhW1siNHRoIE9ic2VydmF0aW9uIl1dDQoNCiNWZWN0b3INCmEgPC0gYygxLCAzLCBlbGVtZW50TmFtZT03KQ0KYVtbMV1dDQphW1siZWxlbWVudE5hbWUiXV0NCiNhW1tlbGVtZW50TmFtZV1dICNOb3Qgd29yayANCiNhW1tgZWxlbWVudE5hbWVgXV0gI05vdCBXb3JrDQoNCiNUaGlzIHdvcmtzIGJlY2F1c2UgYmVjYXVzZSB0YXJnZXROYW1lIGlzICJlbGVtZW50TmFtZSINCnRhcmdldE5hbWUgPC0gImVsZW1lbnROYW1lIg0KYVtbdGFyZ2V0TmFtZV1dDQpgYGANCg0KMi4xNCBsaXN0IG9ubHkgJCBleHRyYWN0b3INCmBgYHtyfQ0Kc2FtcGxlX2RhdGEgPC0gbGlzdCgNCiAgIm9ic2VydmF0aW9uMSI9bGlzdCg1NCwgIm1hbGUiLCAibm9ydGgiLCAxMDApLCANCiAgIm9ic2VydmF0aW9uMiI9bGlzdCgzMiwgImZlbWFsZSIsICJzb3V0aCIsIDI1KSwgDQogICJvYnNlcnZhdGlvbjMiPWxpc3QoMjgsICJmZW1hbGUiLCAiZWFzdCIsIE5BKSwgDQogICJvYnNlcnZhdGlvbjQiPWxpc3QoMjAsICJtYWxlIiwgImVhc3QiLCA3NykNCikNCnNhbXBsZV9kYXRhW1sib2JzZXJ2YXRpb240Il1dW1sxXV0NCnNhbXBsZV9kYXRhJCJvYnNlcnZhdGlvbjQiW1sxXV0NCnNhbXBsZV9kYXRhJGBvYnNlcnZhdGlvbjRgW1sxXV0NCnNhbXBsZV9kYXRhJG9ic2VydmF0aW9uNFtbMV1dDQpgYGANCg0KDQoNCg0K</div>
 
 
 
@@ -2200,7 +2113,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("Test1.Rmd");
+  window.initializeSourceEmbed("MidTermRevisions.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

@@ -1,0 +1,247 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Insérer une code chunk *Ctrl+Alt+I*
+
+```{r}
+#Différence entre plot et print
+plot(cars)
+print(cars)
+```
+
+
+Chapter 2 
+2.4 Data (Atomic)
+```{r}
+"String" #"Mary", "EJHFä1341"
+Numeric #2L (Integer), 2(Integer), 2.4(Double), 
+Logical #TRUE, FALSE
+```
+
+2.5 Collections
+```{r}
+#Atomic Vector contains only the same type of value
+c("John", "Mary")
+c(2, 3.1412)
+c(TRUE, TRUE, F)
+typeof(c(TRUE, TRUE, F)) #Determiné par le type des données(logical)
+
+#List (general vector) contains different types of values
+list("John", 178, TRUE)
+typeof(list("John", 178, TRUE))
+```
+
+2.6 Values and element Values
+```{r}
+#A single basic type value, a vector or a list can represent a value!
+"John"
+12
+c(2, 3.1412)
+list("John", 178, TRUE)
+
+#Element value is an element inside of a vector or a list 
+list("John", 5, TRUE) # has 3 element values.
+list("John",42, list("Mary", 35)) # has also 3 element values.! "Mary" is not a element value of the big list, since it is in a smaller inside another vector 
+```
+
+2.7 Retrieve ONE element value by position
+```{r}
+#Double brackets [[]]
+c("John", "Mary")[[1]]
+c("John", "Mary")[[2]]
+
+#Retrieve 35
+bigList <- list("John",42, list("Mary", 35))
+bigList[[3]][[2]]
+
+#!!2 vectors make 1
+vector <- c(c("mary", "John"), c(1,2))
+vector[[3]][[1]] #!!! Pareil pour un vecteur qui contient des listes!
+
+vector2 <- list(c("mary", "John"), c(1,2))
+vector2[[2]][[1]] #Retrieve 1
+```
+
+2.8 Binding (assign a name with a value)
+```{r}
+#Difference between Binding and Name call
+personName1 = c("John", "Mary")
+personName2 <- c("John", "Mary")
+c("John", "Mary") -> personName3
+
+personName4 = list("John", "Mary")
+personName5 <- list("John", "Mary")
+list("John", "Mary") -> personName6
+
+personName1[[2]]
+personName4[[2]]
+
+#Name calls
+element1 <- "a"
+element2 <- "b"
+c(element1, element2) # there are two name calls
+```
+
+Some valid names for Binding
+```{r}
+my_108_total_credits <- 15
+my.108.total_credits <- 15
+.my.108.total_credits <- 15 #start with . will hide name
+`.108.total_credits` <- 15 #irregular name, ` is not part of the name
+`108 total credits` <- 15
+```
+
+2.9 Concatenate
+```{r}
+#Concatenate atomic vectors
+typeof(c("a", "b"))
+typeof(c("c", "d"))
+c(c("a", "b"), c("c", "d")) 
+
+#Concatenate des listes à l'aide d'un vecteur
+liste = c(list("a", 1), list("c", 2))
+liste[[4]]
+liste
+
+#Concatenate le paste
+paste0("salut", "jean")
+paste("salut", "jean")
+```
+
+2.10 List
+```{r}
+list(c("a", "b"), c("c", "d")) # (1)
+# so (1) is not the same as
+list("a", "b", "c", "d")
+
+#These two are not the same too
+c(c("a", "b"), c("c", "d"))[[1]]
+list(c("a", "b"), c("c", "d"))[[1]] # Error
+
+#Coercion
+coercion <- c(c("a", "b"), c(1, 22))
+typeof(coercion[[3]])
+#coercion[[3]] + 2 #Error 
+
+#With others than character
+coercion2 <- c(c(1,2), c(TRUE, FALSE))
+coercion2
+coercion3 <- c(c(TRUE, FALSE), c(1,2))
+coercion3
+```
+
+2.11 Sampled data (Observation by observation)
+```{r}
+#age, gender, residential district, etc
+list(54, "male", "north", 100) # (1)
+list(32, "female", "south", 25) # (2)
+list(28, "female", "east", NA) # (3) NA -> If value not assigned 
+list(20, "male", "east", 77) # (4)
+
+#Put all together
+oByO1 <- list(
+  list(54, "male", "north", 100), # (1)
+  list(32, "female", "south", 25), # (2)
+  list(28, "female", "east", NA), # (3)
+  list(20, "male", "east", 77) # (4)
+)
+
+#Why not in an atomic vector? 
+oByO2 <- c(
+  list(54, "male", "north", 100), # (1)
+  list(32, "female", "south", 25), # (2)
+  list(28, "female", "east", NA), # (3)
+  list(20, "male", "east", 77) # (4)
+)
+persons2 #Met tout sur un même et seul niveau (comme une big liste qui contient toutes les valeurs à la suite)
+```
+
+2.11 (Feature by feature)
+```{r}
+#Put all together
+fByF <- list(
+  c(54, 32, 28, 20), # age
+  c("male", "female", "female", "male"), # gender
+  c("north", "south", "east", "east"), # residence
+  c(100, 25, NA, 77) # income  
+)
+
+#Why not in an atomic vector? 
+fByF2 <- c(
+  c(54, 32, 28, 20), # age
+  c("male", "female", "female", "male"), # gender
+  c("north", "south", "east", "east"), # residence
+  c(100, 25, NA, 77) # income  
+)
+fByF2 #Met tout sur un même et seul niveau (comme une big liste qui contient toutes les valeurs à la suite)
+```
+
+2.12 Named element values
+```{r}
+# atomic vector
+c("John"=177, "Mary"=160, "Bill"=170)
+# list
+list("John"=177, "Mary"=160, "Bill"=170)
+
+#With irregular name
+list(
+  "1st Observation"=list(54, "male", "north", 100), 
+  "2nd Observation"=list(32, "female", "south", 25), 
+  "3rd Observation"=list(28, "female", "east", NA), 
+  "4th Observation"=list(20, "male", "east", 77) 
+)
+
+#With regular name
+personInfo = list(
+  firstObservation=list(54, "male", "north", 100), 
+  secondObservation=list(32, "female", "south", 25)
+  )
+
+#Retrieve values 
+personInfo[[2]]
+personInfo[["firstObservation"]]
+personInfo[["secondObservation"]][[1]]
+```
+
+2.13 Retrieve element value by element name
+```{r}
+sample_data <- 
+  list(
+    "1st Observation"=list(54, "male", "north", 100), 
+    "2nd Observation"=list(32, "female", "south", 25), 
+    "3rd Observation"=list(28, "female", "east", NA), 
+    "4th Observation"=list(20, "male", "east", 77)
+  )
+sample_data[["4th Observation"]]
+
+#Vector
+a <- c(1, 3, elementName=7)
+a[[1]]
+a[["elementName"]]
+#a[[elementName]] #Not work 
+#a[[`elementName`]] #Not Work
+
+#This works because because targetName is "elementName"
+targetName <- "elementName"
+a[[targetName]]
+```
+
+2.14 list only $ extractor
+```{r}
+sample_data <- list(
+  "observation1"=list(54, "male", "north", 100), 
+  "observation2"=list(32, "female", "south", 25), 
+  "observation3"=list(28, "female", "east", NA), 
+  "observation4"=list(20, "male", "east", 77)
+)
+sample_data[["observation4"]][[1]]
+sample_data$"observation4"[[1]]
+sample_data$`observation4`[[1]]
+sample_data$observation4[[1]]
+```
+
+
+
+
