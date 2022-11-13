@@ -242,6 +242,235 @@ sample_data$`observation4`[[1]]
 sample_data$observation4[[1]]
 ```
 
+Chapter 3
+3.1 Element values
+```{r}
+#Labelled vs non-labelled items
+nLbld = list(
+  "milk", 
+  "apple", 
+  "pork"
+)
+lbld = list(
+  Compulsory = 
+    c("Principle of Economics", "Calculus", "Accounting"),
+  Selective = 
+    c("Philosophy","Chinese Literature")
+)
+lbld$Selective
+
+#Nested list
+list(
+  name="Gianandrea Noseda conducts Schumann and Mendelssohn — With Mikhail Pletnev",
+  time="2021, Oct, 01",
+  program=list(
+    "Robert Schumann, Piano Concerto in A Minor, Op. 54",
+    "Felix Mendelssohn-Bartholdy, Symphony No. 4 in A Major, Op. 90, Italian"
+  )
+)
+```
+
+3.2 JSON Data
+```{r}
+# Observation by observation
+concerts_obo <-
+  jsonlite::fromJSON("https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=17", simplifyDataFrame = F)
+
+# Feature by feature
+concerts_fbf <-
+  jsonlite::fromJSON("https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=17", simplifyDataFrame = T)
+
+concerts_obo[[1]]
+View(concerts_fbf) #It's a dataframe
+```
+
+3.2 Retrieve multiple element values
+```{r}
+JohnsFamily <-
+  list(
+    name = "John", 
+    age = 35,
+    spouse = list(name = "Mary", age = 32),
+    children = list(
+                  list(name = "Bill", age = 5),
+                  list(name = "Jane", age = 3)
+                )
+  ) #This list has 4 elements, element names are "name, age, spouse and children"
+
+length(JohnsFamily)
+names(JohnsFamily)
+
+#Sys.Date() gives the system's date
+Sys.Date()
+
+#Johns name and age !! Only 1 [], if juste one retrieval then double [[]]
+JohnsFamily[c(1,2)]
+JohnsFamily[c("name", "age")]
+```
+
+3.3 Value replacement 
+```{r}
+# [[]]<-, []<-, $ <-
+#replace 1 value
+johnsFamilyCopy <- JohnsFamily
+johnsFamilyCopy[[1]] = "Watson"
+johnsFamilyCopy[["age"]] <- 11
+"Lennon" -> johnsFamilyCopy$children[[1]]$name
+
+#Replace multiple values
+johnsFamilyCopy2 <- JohnsFamily
+johnsFamilyCopy2[c(1,2)] <- list("name"="Watson2", "age"=22)
+johnsFamilyCopy2[c(1,2)] <- list("Watson2", 22) #The same as above
+johnsFamilyCopy2[c(2)] <- 25
+
+johnsFamilyCopy
+johnsFamilyCopy2
+```
+
+
+3.4.1 Add element values
+```{r}
+example1 <- c("John", "Mary", "Bill")
+
+#add following index (retrieve an non-existing element name "person4")
+example1[["person4"]] <- "Ken"
+#Add index 7 and 8 (retrieve two non-existing element positions)
+example1[c(7,8)] <- c("person7"="Jack", "Janem")
+example1
+
+#with $
+johnsFamilyCopy3 <- JohnsFamily
+johnsFamilyCopy3$children[[3]] <- 
+  "John" # False because not following the same structure($ is for list only)
+johnsFamilyCopy3$children[[3]] <- list(name="Lisa", age=0) #This one's right
+johnsFamilyCopy3
+
+```
+
+3.4.2 Data Construction
+```{r}
+#Two types of construction
+height <- c("001"=177, "002"=183, "003"=173)
+height2 <- numeric(0) # Declaration
+height2[["001"]] <- 177
+height2[c("002", "003")] <- c(183, 173)
+
+#Another example with length 3, (can be logical(0) or list())
+chars = character(3)
+chars
+```
+
+3.4.3 Data construction
+```{r}
+# Suppose this query Retrieve the 1st course in semester 1, school year 108
+#classSchedule$yr108$semester1[[1]] 
+#create the structure
+classSchedule <- list()
+classSchedule[["yr108"]] <- list("semester1"=list("Programming", "SQL", "Machine Learning"), semester2=list("Data Mining", "Java", "OOP"))
+classSchedule$yr108$semester1[[1]] 
+classSchedule
+
+#Simpler way
+classSchedule2 <- list()
+classSchedule2$yr108$semester1$course1$name <- "Programming"
+classSchedule2$yr108$semester1$course1[["credit"]] <- 2
+classSchedule2
+```
+
+3.5 Remove element values
+```{r}
+example2 <- c("John", "Mary", "Bill", person4="Jack")
+
+#Remove jack 
+example2 <- example2[c(1, 2, 3)]
+```
+    #Sequences
+    1:3 # from 1 to 3, each increases by 1
+    7:11
+    2:-1 # from 2 to -1, each decreases by 1
+```{r}
+example2[c(1,2,3)] # the same as
+example2[1:3]
+
+#Sequence
+seq(from=1, to=3, by=1) # from 1 to 3 increase by 1
+seq(from=3, to=11, by=4) # from 3 to 11 increase by 4
+seq(from=3, to=11, length.out=10) # divide interval [3, 11] into 10 equal length cuts
+
+#Inclusive, exclusive, multiple exclusion and exclusive indexation
+example3 <- c("John", "Mary", "Bill", person4="Jack")
+
+## inclusive approach
+example3[c(1, 2, 3)]
+
+## exclusive approach
+example3[-c(4)]
+
+## multiple exclusion is possible
+example3[-c(1, 4)]
+
+
+##Exclusive indexation
+example4 <- c("John", "Mary", "Bill", person4="Jack")
+# Object source <- retrieval of elements to keep
+example4 <-
+  example4[-c(4)] #!! Does not work with element name instead of index
+```
+
+Another example
+```{r}
+example5 <- c("John", "Mary", "Bill", person4="Jack")
+## exclude 2 to 4
+example5[-c(2, 3, 4)]
+
+example6 <- c("John", "Mary", "Bill", person4="Jack")
+## exclude 2 to 4
+example6[-c(2:4)]
+```
+
+Bind with NULL or retrieval
+```{r}
+johnsFamilyCopy4 <- JohnsFamily
+
+#bind with NULL
+johnsFamilyCopy4$spouse <- NULL
+
+#bind the lists with null
+johnsFamilyCopy4[c(3, 4)] <- NULL
+
+johnsFamilyCopy4
+```
+
+3.6 Example on data Taipei
+```{r}
+mrtStationAds <- 
+  httr::content(httr::GET("https://data.taipei/api/v1/dataset/91290609-2b8b-4130-8ce9-e6085529bc46?scope=resourceAquire&limit=1000"))
+mrtStationAds
+
+maokongGondola <- httr::content(httr::GET("https://ptx.transportdata.tw/MOTC/v2/Rail/Metro/Station/TRTC?$top=30&$format=JSON"))
+maokongGondola
+```
+
+TESTS
+```{r}
+persons <- c(dad <- "john", mom = "mary")
+persons2 <- c(dad="john", mom = "mary")
+
+persons[c(2)] <- 4
+persons
+persons2
+
+liste <- list(a <- 3, b <- 4)
+a
+b
+
+list(3, 4, 5)[c(3)]
+
+x <- numeric(0)
+x <- c(12, "chloe", TRUE)
+typeof(x)
+```
+
 
 
 

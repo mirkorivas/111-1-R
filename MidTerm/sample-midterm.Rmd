@@ -19,8 +19,8 @@ browseURL("https://docs.google.com/forms/d/e/1FAIpQLSdCWROsuHCvNTG40LUrfQRMfZwrm
 ```  
 
 ```{r}
+#test
 C = TRUE*1
-
 ```
 
      
@@ -74,6 +74,13 @@ c("student association", "school club", "school sport team", "department sport t
 Construct the `survey` object that can satisfy the above retrieval outcomes:
 ```{r ans11}
 # survey
+survey = list()
+survey$questions[[1]] <- "Are you happy with our campus? Choose a number from 5(very happy), 4(happy), 3(satisfy), 2( unhappy), to 1(very unhappy)."
+survey$options[[1]] <- c(1, 2, 3, 4, 5)
+
+survey$questions[[2]] <- "Did you participate in any of the following activities? Check all that apply to you. (student association, school club, school sport team, department sport team)"
+survey$options[[2]] <- c("student association", "school club", "school sport team", "department sport team")
+survey
 ```
 
 ## 1.2 One observation
@@ -98,6 +105,10 @@ c("school club", "department sport team")
 
 ```{r ans12}
 # single_response
+single_response = list()
+single_response$questions[[1]] <- survey$options[[1]][[4]]
+single_response$questions[[2]] <- c(2,4)
+single_response
 ```
 
 ## 1.3 Several observations
@@ -123,6 +134,33 @@ c("school club", "department sport team")
 
 ```{r ans13}
 # responses
+reponse1 <- list(
+  questions = list(
+    4, c(2,4)
+  )
+)
+reponse2 <- list(
+  questions = list(
+    3, NA
+  )
+)
+reponse3 <- list(
+  questions = list(
+    5, c(1:3)
+  )
+)
+
+reponses <- list(reponse1, reponse2, reponse3)
+reponses
+
+#responses = list()
+#responses[[1]]$questions[[1]] <- survey$options[[1]][[4]]
+#responses[[1]]$questions[[2]] <- c(2,4)
+#responses[[2]]$questions[[1]] <- survey$options[[1]][[3]]
+#responses[[2]]$questions[[2]] <- NA
+#responses[[3]]$questions[[1]] <- survey$options[[1]][[5]]
+#responses[[3]]$questions[[2]] <- c(1:3)
+#responses
 ```
 
 ## 1.4 Modify 
@@ -135,6 +173,10 @@ Modify `responses` so that:
 
 ```{r ans14}
 # responses
+reponses <- reponses[c(1,3)]
+reponses[[1]]$questions[[1]] <- survey$options[[1]][[3]]
+reponses[[2]]$questions[[1]] <- survey$options[[1]][[3]]
+reponses
 ```
 
 ## 1.5 Feature by feature
@@ -146,6 +188,27 @@ For question2.XXX features, their values are logical. TRUE means the student has
 
 ```{r ans15}
 # responses_fbf
+responses_fbf <- list(
+  question1 = c(
+    4,3,5
+  ), 
+  question2 = list(
+    student_association = c(
+      FALSE, NA, TRUE
+    ), 
+    school_club = c(
+      TRUE, NA, TRUE
+    ), 
+    school_sport_team = c(
+      FALSE, NA, TRUE
+    ), 
+    department_sport_team = c(
+      TRUE, NA, FALSE
+    )
+  )
+  
+)
+responses_fbf
 ```
 
 
