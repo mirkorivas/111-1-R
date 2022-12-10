@@ -169,7 +169,6 @@ mydata <- read.table("C:\\Users\\mirko\\Documents\\NTPUProg\\ProjetsR\\111-1-R\\
     header=TRUE, sep="," 
 ) 
 print(mydata)
-
 mydata2 <- read.csv("C:\\Users\\mirko\\Documents\\NTPUProg\\ProjetsR\\111-1-R\\cities.csv",
     header=TRUE, sep="," 
 ) 

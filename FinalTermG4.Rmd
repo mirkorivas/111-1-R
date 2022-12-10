@@ -1,0 +1,133 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+```{r}
+library(readr)
+spotify_features <- read.csv("SpotifyFeatures.csv", header=TRUE, sep=",")
+spotify_features
+typeof(spotify_features)
+
+```
+
+```{r}
+shinyApp(
+  ui = fluidPage(
+    titlePanel("Mimicking a Google Form with a Shiny app"),
+    div(
+      id = "form",
+      
+      textInput("name", "Name", ""),
+      textInput("favourite_pkg", "Favourite R package"),
+      checkboxInput("used_shiny", "I've built a Shiny app in R before", FALSE),
+      sliderInput("r_num_years", "Number of years using R", 0, 25, 2, ticks = FALSE),
+      selectInput("os_type", "Operating system used most frequently",
+                  c("",  "Windows", "Mac", "Linux")),
+      actionButton("submit", "Submit", class = "btn-primary")
+    )
+  ),
+  server = function(input, output, session) {
+  }
+)
+```
+
+```{r}
+myForm <- shinyreforms::ShinyForm$new(
+    "myForm",
+    submit = "Submit",
+    onSuccess = function(self, input, output) {
+        yourName <- self$getValue(input, "name_input")
+
+        output$result <- shiny::renderTable({
+            spotify_features[0:3]
+        })
+    },
+    onError = function(self, input, output) {
+        output$result <- shiny::renderText({
+              "error"
+        })
+    },
+    shinyreforms::validatedInput(
+        shiny::textInput("name_input", label = "Username"),
+        helpText="Username length is between 4 and 12 characters.",
+        validators = c(
+            #shinyreforms::ValidatorMinLength(4),
+            #shinyreforms::ValidatorMaxLength(12),
+            shinyreforms::Validator$new(
+                test = function(value) value != "test",
+                failMessage = "Username can't be 'test'!"
+            )
+        )
+    ),
+    shinyreforms::validatedInput(
+        shiny::checkboxInput("checkbox", label = "I accept!"),
+        validators = c(
+            shinyreforms::ValidatorRequired()
+        )
+    )
+)
+ui <- shiny::bootstrapPage(
+    shinyreforms::shinyReformsPage(  # This adds a dependency on shinyreforms .css
+        shiny::fluidPage(
+            shiny::tags$h1("Example ShinyForm!"),
+            myForm$ui(),  # <- ShinyForm will be included here!
+            shiny::tags$h4("Result:"),
+            shiny::textOutput("result")
+        )
+    )
+)
+server <- function(input, output, session) {
+    myForm$server(input, output)
+
+    # More server logic
+}
+shiny::shinyApp(ui = ui, server = server)
+```
+```{r}
+
+library(shiny)
+
+names.df <- read.csv("https://www.finley-lab.com/files/data/name_list.csv")
+
+# Define UI
+ui <- fluidPage(
+  titlePanel("Random Names Age Analysis"),
+  sidebarLayout(
+    sidebarPanel(
+      # Dropdown selection for Male/Female
+      selectInput(inputId = "sexInput", label = "Sex:",
+                  choices = c("Female" = "F", 
+                              "Male" = "M", 
+                              "Both" = "B"))
+    ),
+    mainPanel(
+      "dataTableOutput(spotify_features)"
+    )
+  )
+)
+
+# Define server logic
+server <- function(input, output) {
+
+  output$histogram <- renderPlot({
+    
+    if(input$sexInput != "B"){
+      subset.names.df <- subset(names.df, Sex == input$sexInput)
+    } else {
+      subset.names.df <- names.df
+    }
+    
+    ages <- subset.names.df$Age
+    
+    # draw the histogram with the specified 20 bins
+    hist(ages, col = 'darkgray', border = 'white')
+  })
+
+}
+
+# Create Shiny app
+shinyApp(ui = ui, server = server)
+```
+

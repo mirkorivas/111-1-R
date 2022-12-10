@@ -469,7 +469,139 @@ list(3, 4, 5)[c(3)]
 x <- numeric(0)
 x <- c(12, "chloe", TRUE)
 typeof(x)
+
+
+family <- list("dad"="dad1", "mom"="mom1", "son"="son1")
+#family[c(4,5)] <- c("sister"="sister1", "uncle"="uncle1") #Le label se perd !
+#family[["sister"]] <- "sister1" #Fonctionne
+#family[c("sister", "uncle")] <- c("sister1", "uncle1") #Fonctionne
+family
+
+
 ```
+
+```{r}
+A=c(2, 5, 7, 6, 4)
+names(A)[[3]] <- "star"
+A
+```
+
+```{r}
+JohnsFamily <-
+  list(
+    name = "John", 
+    age = 35,
+    spouse = list(name = "Mary", age = 32),
+    children = list(
+                  list(name = "Bill", age = 5),
+                  list(name = "Jane", age = 3)
+                )
+  )
+
+
+#JohnsFamily[["children"]][[1]] <- c(list(name="Bill", age=6))          #2
+JohnsFamily$`children`[[1]][[2]] <- c(c(name="Bill", age=6))[[2]]      #4
+#JohnsFamily[[1]][[2]]
+JohnsFamily$children
+
+```
+
+```{r}
+John <- list(name="John", income=c(29109, 22839, 30293))
+names(John[["income"]])[[1]] <- "year2020"
+John
+```
+
+```{r}
+f=3
+'Hello, world'
+g <- f+h
+h=5
+```
+
+```{r}
+John <- list(name="John", age=35)
+Mary <- list(name="Mary", age=32)
+John$spouse = Mary
+
+
+
+David <- list(name="David", age=0)
+John$children[1] = David
+John$spouse = NULL
+John
+```
+
+```{r}
+object <- list(
+  list(name="Ken", age=45),
+  list(name="Mary", age=37)
+)
+object[[1]]$age=object[[1]]$age+1; object[[2]]$age=object[[2]]$age+1
+object
+```
+
+2 : Mary 11 True NA
+```{r}
+list2 <- list("Mary", 11, TRUE)
+list2[c(5:6)] <- c("John", "9")
+list1 = list2
+list2 <- list2[-c(2:5)]
+list2[[4]] <- "Leo"
+list1[[5]] = FALSE
+list1
+```
+
+```{r}
+length(unlist(list(list("a", list(1, 2)), list("b", list(3, 4)))))
+c(list("a"), list("b"))
+length(c(list("a", list(1, 2)), list("b", list(3, 4))))
+length(list(c(1, 2), c(3, 4)))
+```
+
+```{r}
+class <- list(
+  `1score`=c(59,62,18),
+  deux = list(Chinese=62,18,59),
+  no.3 = list(59, English=NA, 18, 12), 
+  score4 = c(62,NA)
+)
+
+
+class$"deux"
+```
+
+```{r}
+stringr::str_replace(a, "Hi", "Hello")
+```
+
+
+
+
+```{r}
+stringr::str_replace(a, "Hi", "Hello")
+```
+
+
+```{r}
+.salut = "salut"
+
+
+`hi` = "salut"
+`hi`
+"salt" = "salut"
+"salt"
+```
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,135 @@
+---
+title: "110-1-r4ds Midterm"
+params:
+  name: "Mirko Rivas"
+  id: "410979192"
+editor_options: 
+  chunk_output_type: console
+---
+
+**Please change John to your name, and 007 to your school id.**
+
+The exam has two part:
+
+# Part 1: Multiple choices (full mark = 72)
+
+10 Questions. Each is worth 7 points. Please run the following command to visit the form for multiple choices.
+
+Execute the following code chunk brings you to the MCQ form. Please complete MCQ there.
+
+```{r}
+browseURL("https://forms.gle/Z9gA9k5hCXW1wfck6")
+```
+
+# Part 2: Programming Question (Full mark is 30)
+
+## Before you start
+
+Each question is framed like:
+
+*`Create an object named practice and bind a numeric value of 5 to it.`*
+
+```{r ans0}
+# practice
+```
+
+-   Put your program to solve the question inside the corresponding code chunk that has a label `ansXX` where `XX` is some number. (程式碼請寫在帶有`ansXX`標籤的code chunk裡)
+
+-   Program should proceed the last `# yyyy` line where `yyyy` is some object name for this question. Here `# practice` is the last line. (Code chunk裡的程式碼必需插在最後一行`# yyyy` (這裡是`# practice`)的前面）
+
+-   Never delete or modify the last line `# yyyy`. (千萬不能刪除或更動最後一行`# yyyy`的內容)
+
+## The Question
+
+# 1 Restaurant information （15 points)
+
+Ti Jo Kitchen is located at "1F, No. 12-2, Daguan Rd, Sanxia District, New Taipei City, 237". It opens from Tuesday to Sunday, from 11:30AM to 8:30PM, but closes on Monday. Free Wi-Fi is available.
+
+```{r}
+ti_jo_kitchen$name # show "Ti Jo Kitchen"
+ti_jo_kitchen$address # show
+# "1F, No. 12-2, Daguan Rd, Sanxia District, New Taipei City, 237"
+ti_jo_kitchen$`free-wifi` # show
+# TRUE
+
+names(ti_jo_kitchen$businessHours) # show
+# c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+
+ti_jo_kitchen$businessHours$XXXday # show 
+# "11:30AM to 8:30PM" when XXXday is not Monday
+# NA when XXXday is Monday
+```
+
+Construct `ti_jo_kitchen` object that can satisfy the above conditions:
+
+```{r ans1}
+ti_jo_kitchen = list(
+  name = "Ti Jo Kitchen", 
+  address = "1F, No. 12-2, Daguan Rd, Sanxia District, New Taipei City, 237", 
+  `free-wifi`= TRUE, 
+  businessHours = list(      
+      "Monday" = NA, 
+      "Tuesday" = "11:30AM to 8:30PM",
+      "Wednesday" = "11:30AM to 8:30PM",
+      "Thursday" = "11:30AM to 8:30PM", 
+      "Friday" = "11:30AM to 8:30PM", 
+      "Saturday" = "11:30AM to 8:30PM", 
+      "Sunday" = "11:30AM to 8:30PM"
+  ) 
+)
+ti_jo_kitchen
+# ti_jo_kitchen
+```
+
+# 2 My day (10points)
+
+At 9AM, I attend the class 'Accounting', which can be check via:
+
+```{r}
+Me$`9AM`$AttendClass$name
+```
+
+Lunch time at 12PM, I ate at Ti Jo Kitchen whose information is kept at
+
+```{r}
+Me$`12PM`$EatLunch$Restaurant # has the value as ti_jo_kitchen
+```
+
+Friends who accompany me for lunch are "John" and "Mary", which I kept at
+
+```{r}
+Me$`12PM`$EatLunch$companions
+```
+
+Construct `Me` object
+
+```{r ans2}
+Me = list(
+  `9AM`= list(
+    "AttendClass" = list(
+      "name" = "Accounting"
+    )
+  ), 
+  `12PM`= list(
+    "EatLunch" = list(
+      "Restaurant" = ti_jo_kitchen, 
+      "companions" = list("John", "Mary")
+    )
+    
+  )
+)
+Me$`9AM`$AttendClass$name
+Me$`12PM`$EatLunch$Restaurant # has the value as ti_jo_kitchen
+Me$`12PM`$EatLunch$companions
+Me
+#Me
+```
+
+# 3 My mistake (5 points)
+
+In the previous journal, I made a mistake. I attended the class at 10AM instead of 9AM. Please help me correct that:
+
+```{r ans3}
+names(Me)[[1]] <- "10AM"
+# Me
+```

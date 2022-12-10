@@ -1,0 +1,199 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+0.1 Needed Packages
+```{r}
+install.packages(c('readr', 'svDialogs', 'dplyr'))
+library(readr)
+library(svDialogs)
+library(dplyr)
+```
+
+0.2 Load Data
+```{r}
+#Load 
+spotify_top50 <- read.csv("https://gist.githubusercontent.com/rioto9858/ff72b72b3bf5754d29dd1ebf898fc893/raw/1164a139a780b0826faef36c865da65f2d3573e0/top50MusicFrom2010-2019.csv", header=TRUE, sep=",")
+
+project = list()
+project$data$spotify_top50 = list(
+  value=spotify_top50,
+  description="spotify_top50_from_2010_to_2019",
+  source="https://gist.githubusercontent.com/rioto9858/ff72b72b3bf5754d29dd1ebf898fc893/raw/1164a139a780b0826faef36c865da65f2d3573e0/top50MusicFrom2010-2019.csv"
+)
+```
+
+0.3 Have a look
+```{r}
+#how data looks like 
+View(spotify_top50)
+summary(spotify_top50)
+```
+
+0.4 Change column names for convenience
+```{r}
+#Change column names for convenience
+colnames(spotify_top50) <- c('title','artist','genre','year', 'beats_per_min', 'energy', 'danceability', 'loudness', 'liveness', 'valence', 'length', 'acousticness', 'speechiness', 'popularity')
+#Establish list of music genres
+genres <- unique(spotify_top50$genre)
+head(spotify_top50)
+```
+
+1. Collect user information
+```{r}
+user <- list()
+user$name <- dlgInput("What's your name ?", Sys.info()["user"])$res
+user$chosen_genres <- dlg_list(genres, multiple = TRUE, title = "Choose a genre that you like : ")$res
+
+like_danceability <- dlgInput("Do you like danceable songs (T or F): ")$res
+if(like_danceability == "T"){user$like_danceability <- TRUE} else if (like_danceability == "F"){user$like_danceability <- FALSE} else {user$like_danceability <- NA}
+
+like_loudness <- dlgInput("Do you like loud songs (T or F): ")$res
+if(like_loudness == "T"){user$like_loudness <- TRUE} else if (like_loudness == "F"){user$like_loudness <- FALSE} else {user$like_loudness <- NA}
+
+like_energetic <- dlgInput("Do you like energetic songs (T or F): ")$res
+if(like_energetic == "T"){user$like_energetic <- TRUE} else if (like_energetic == "F"){user$like_energetic <- FALSE} else {user$like_energetic <- NA}
+
+user$created_playlists <- list()
+print(user)
+```
+
+2. Song recommendation 
+```{r}
+filtered_by_genre <- filter(spotify_top50, genre == user$chosen_genres[[sample(1:length(user$chosen_genres),1)]])
+#View(filtered_by_genre)
+
+user$recommended_song <- filtered_by_genre[sample(1:length(unique(filtered_by_genre$title)), 1, replace=FALSE),]
+paste0("You like the genre \'", user$recommended_song$genre, "\' then you'll like this song for sure : ", user$recommended_song$title, " - ", user$recommended_song$artist," (", user$recommended_song$year,")")
+```
+2.1 Let's play the song
+```{r}
+#Let's play the song ! (Spotify account needed)
+#browseURL(paste("https://open.spotify.com/search/",gsub("[[:space:]]", "%", user.recommended_song$title),"%",gsub("[[:space:]]", "%", user.recommended_song$artist)))
+user$recommended_song$url <- paste("https://www.youtube.com/results?search_query=",gsub("[[:space:]]", "+", user$recommended_song$title),gsub("[[:space:]]", "+", user$recommended_song$artist))
+browseURL(user$recommended_song$url)
+```
+
+3. Create playlist with a song of each music genre -> "let's discover playlist"
+```{r}
+lets_discover_playlist = data.frame(matrix(ncol = 14, nrow = 0))
+colnames(lets_discover_playlist) <- colnames(spotify_top50)
+for(i in 1:length(genres)){
+  filtered <- filter(spotify_top50, genre == genres[[i]])
+  #(list_filtered[sample(1:length(unique(list_filtered$title)),1,replace=FALSE),]) #Debug
+  lets_discover_playlist[nrow(lets_discover_playlist) + 1,] <- filtered[sample(1:length(unique(filtered$title)),1,replace=FALSE),] #Add into lets_discover_playlist
+}
+
+user$lets_discover_playlist <- lets_discover_playlist
+if(dlgInput("See playlist details (T or F)")$res){
+  View(user$lets_discover_playlist)
+} else {
+  View(select(user$lets_discover_playlist, title, artist, genre))
+}
+```
+
+4. Create playlist with you favorite choices
+```{r}
+playlist <- list()
+playlist$name <- dlgInput("Type the name of you new playlist : ")$res
+playlist$duration <- strtoi(dlgInput("How long do you want it to last in minutes (recommended 60)")$res)
+```
+
+4.1 Create the playlist
+```{r}
+#user$created_playlists <- list() #Debug 
+filtered <- filter(spotify_top50, genre == user$chosen_genres)
+if(user$like_danceability){
+  filtered <- filter(filtered, danceability >= mean(spotify_top50$danceability))
+} else if (!user$like_danceability){
+  filtered <- filter(filtered, danceability < mean(spotify_top50$danceability))
+}
+if(user$like_loudness){
+  filtered <- filter(filtered, loudness >= mean(spotify_top50$loudness))
+} else if (!user$like_loudness){
+  filtered <- filter(filtered, loudness < mean(spotify_top50$loudness))
+}
+if(user$like_energetic){
+  filtered <- filter(filtered, energy >= mean(spotify_top50$energy))
+} else if (!user$like_danceability){
+  filtered <- filter(filtered, energy < mean(spotify_top50$energy))
+}
+
+#adjust the length of the playlist
+if(sum(spotify_top50$length)/60 < playlist$duration){
+  paste0("Sorry we don't have enough songs to recommend the following playlist lasts ", sum(spotify_top50$length)/60, "min.")
+  playlist$content <- filtered
+  user$created_playlists[[length(user$created_playlists)+1]] <- playlist
+} else {
+  playlist$content <- filtered
+  while(sum(playlist$content$length)-mean(spotify_top50$length)>=playlist$duration*60){
+    playlist$content <- playlist$content[-c(sample(1:length(playlist$content$length), 1)),] #Remove random 
+  }
+  user$created_playlists[[length(user$created_playlists)+1]] <- playlist
+}
+#print(user$created_playlists[[1]])
+View(user$created_playlists[[length(user$created_playlists)]]$content)
+paste0("Your playlist '",user$created_playlists[[length(user$created_playlists)]]$name,"' (", sum(user$created_playlists[[length(user$created_playlists)]]$content$length)/60, "minutes) has been successfully created.")
+```
+
+
+#Wanna get famous, what genre works better (what is the genre that has more famous songs)
+
+
+#What type of song regarding the genre (acousticness, loudness, ...)
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Selecting multiple 
+```{r}
+# Select one or several months
+res <- dlg_list(month.name, multiple = TRUE)$res
+if (!length(res)) {
+  cat("You cancelled the choice\n")
+} else {
+  cat("You selected:\n")
+  print(res)
+}
+```
+
+
+
+user = list(
+        name = "name", 
+        chosen_genres = list("hip hop", "latin", "...", ...),
+        like_danceability = True, 
+        like_loudness = False, 
+        recommended_song = df.row,
+        lets_discover_playlist = df(50rows),
+        created_playlists = list()
+)
+
+
+
+
+
+
+
+
+
+```{r}
+text <- cbind(2, "salut")
+cat(paste(text, collapse="."))
+```
+
+```{r}
+library(svDialogs)
+user.input <- dlgInput("Enter a number", Sys.info()["user"])$res
+```
+
+```{r}
+#Create playlist
+#What type of song should you do in order to get famous
+my.name <- readline(prompt="Enter name: ")
+my.age <- readline(prompt="Enter age: ")
+# convert character into integer
+my.age <- as.integer(my.age)
+print(paste("Hi,", my.name, "next year you will be", my.age+1, "years old."))
+```
